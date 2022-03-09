@@ -1,1 +1,2 @@
-# Inter-IIT-digitalAlpha
+# MERN-Stack-Boilerplate
+A boilerplate for MERN Stack applications
