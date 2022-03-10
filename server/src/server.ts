@@ -5,7 +5,8 @@ import { Response } from 'express';
 import * as bodyParser from 'body-parser';
 import * as mongoose from 'mongoose';
 //server file imports
-import AuthRouter from './routers/AuthRouter';
+// import AuthRouter from './routers/AuthRouter';
+import DataRouter from './routers/DataRouter';
 import { getEnvironmentVariables } from './environments/env';
 
 export class Server {
@@ -20,7 +21,7 @@ export class Server {
 
   setConfigurations() {
     // boilerplate configuration of the packages
-    this.connectMongoDb();
+    // this.connectMongoDb();
     this.configureBodyParser();
     console.log('Configurations have been successfully setup');
   }
@@ -33,7 +34,8 @@ export class Server {
 
   setRoutes() {
     // all the server api routes go here
-    this.app.use('/auth', AuthRouter);
+    this.app.use('/', DataRouter);
+    // this.app.use('/auth', AuthRouter);
   }
 
   connectMongoDb() {
