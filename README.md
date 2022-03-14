@@ -1,2 +1,1 @@
-# MERN-Stack-Boilerplate
-A boilerplate for MERN Stack applications
+# Inter IIT Tech Meet Digital Alpha Project
