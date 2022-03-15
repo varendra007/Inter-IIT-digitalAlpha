@@ -1,7 +1,17 @@
 import requests
-def market(split, start, end, ticker):
-    r = requests.get('https://data.nasdaq.com/api/v3/datasets/WIKI/'+ticker+'.json?start_date='+start+'&end_date='+end+'&order=asc&column_index=4&collapse='+split+'&transformation=rdiff')
-    r = r.json()
-    return r['dataset']['data']
+import time
+def market(ticker, start, end):
+    url = 'https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&symbol='+ticker+'&apikey=UPGJXRX8G99R3BG5'
+    r = requests.get(url)
+    data = r.json()
+    ans = []
+    for date in data["Weekly Time Series"]:
+        temp_date = time.strptime(date, "%Y-%m-%d")
+        if temp_date<=end and temp_date>=start:
+            ans.append([date, float(data["Weekly Time Series"][date]["4. close"])])
+    return ans
 
-print(market('monthly', '2015-05-01', '2017-07-01', 'twou'))
+tick = input()
+start = time.strptime(input('Start (yyyy-mm-dd):'), "%Y-%m-%d")
+end = time.strptime(input('End (yyyy-mm-dd):'), "%Y-%m-%d")
+print(market(tick, start, end))
