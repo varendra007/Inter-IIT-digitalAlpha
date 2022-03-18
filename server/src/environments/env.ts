@@ -4,6 +4,7 @@ import { DevEnvironment } from './dev.env';
 export interface Environment {
   db_url: string;
   jwt_secret: string;
+  api_key: string;
 }
 
 export function getEnvironmentVariables(): Environment {

@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Router } from 'express';
 import { DataController } from '../controllers/DataController';
 
@@ -18,7 +19,7 @@ class DataRouter {
   }
   getRoutes(): void {
     // add all get routes here
-    this.router.get('/search', DataController.getAccessionNumber);
+    this.router.get('/search', DataController.getFilings);
   }
   postRoutes(): void {
     // add all post routes here

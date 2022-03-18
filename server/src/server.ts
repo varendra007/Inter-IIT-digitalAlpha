@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 import * as express from 'express';
@@ -34,7 +35,7 @@ export class Server {
 
   setRoutes() {
     // all the server api routes go here
-    this.app.use('/', DataRouter);
+    this.app.use('/data', DataRouter);
     // this.app.use('/auth', AuthRouter);
   }
 
