@@ -70,13 +70,7 @@ export class DataController {
       let end = false;
       let query = '';
       if (companies) {
-        for (const company of companies as string[]) {
-          const index = (companies as string[]).indexOf(company);
-          query += `cik:${company} `;
-          if(index !== (companies as string[]).length - 1) {
-            query += `OR `;
-          }
-        }
+        query += `cik:${companies}`;
       }
       if (startDate) {
         start = true;
@@ -84,7 +78,7 @@ export class DataController {
       if (endDate) {
         end = true;
       }
-     const date = new Date();
+      const date = new Date();
       query += `${start && ` AND filedAt:[${startDate}`}${(start && end) ? ` TO ${endDate}]` : ` TO ${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}]`}`;
       console.log(query);
       const queryObj10k = {
@@ -141,7 +135,11 @@ export class DataController {
         data: queryObj8k
       });
 
-      let ret: any[] = [];
+      const ret: DataType = {
+        '10-k': [],
+        '10-q': [],
+        '8-k': []
+      };
 
       if(response10k.data) {
         const filings = response10k.data.filings;
@@ -149,7 +147,8 @@ export class DataController {
         for(const filing of filings) {
           required = [ ...required, filing.linkToFilingDetails ];
         }
-        ret = [ ...ret, required ];
+        console.log(required);
+        ret['10-k'] = required;
       }
 
       if(response10q.data) {
@@ -158,7 +157,8 @@ export class DataController {
         for(const filing of filings) {
           required = [ ...required, filing.linkToFilingDetails ];
         }
-        ret = [ ...ret, required ];
+        console.log(required);
+        ret['10-q'] = required;
       }
 
       if(response8k.data) {
@@ -167,7 +167,8 @@ export class DataController {
         for(const filing of filings) {
           required = [ ...required, filing.linkToFilingDetails ];
         }
-        ret = [ ...ret, required ];
+        console.log(required);
+        ret['8-k'] = required;
       }
 
       return res.status(200).json({
