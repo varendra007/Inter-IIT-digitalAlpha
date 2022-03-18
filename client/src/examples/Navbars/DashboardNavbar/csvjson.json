@@ -1,0 +1,1462 @@
+[
+  {
+    "Company": "2U INC",
+    "CIK": "0001459417",
+    "Ticker": "twou"
+  },
+  {
+    "Company": "30DC INC",
+    "CIK": "0001118974",
+    "Ticker": "tdhc"
+  },
+  {
+    "Company": "3D PIONEER SYSTEMS INC",
+    "CIK": "0001556753",
+    "Ticker": "dpsm"
+  },
+  {
+    "Company": "8X8 INC",
+    "CIK": "0001023731",
+    "Ticker": "eght"
+  },
+  {
+    "Company": "A10 NETWORKS INC",
+    "CIK": "0001580808",
+    "Ticker": "aten"
+  },
+  {
+    "Company": "ACI WORLDWIDE INC",
+    "CIK": "000935036",
+    "Ticker": "aciw"
+  },
+  {
+    "Company": "ACTUA CORP",
+    "CIK": "0001085621",
+    "Ticker": "acta"
+  },
+  {
+    "Company": "ADEXA INC",
+    "CIK": "0001119691",
+    "Ticker": ""
+  },
+  {
+    "Company": "ADOBE INC",
+    "CIK": "0000796343",
+    "Ticker": "adbe"
+  },
+  {
+    "Company": "ADVANCED VOICE RECOGNITION",
+    "CIK": "0001342936",
+    "Ticker": "avoi"
+  },
+  {
+    "Company": "ADVANT-E CORP",
+    "CIK": "0000925043",
+    "Ticker": "advc"
+  },
+  {
+    "Company": "ADVANTEGO CORP",
+    "CIK": "0000869531",
+    "Ticker": "adgo"
+  },
+  {
+    "Company": "AGILYSYS INC",
+    "CIK": "0000078749",
+    "Ticker": "agys"
+  },
+  {
+    "Company": "ALARM.COM HOLDINGS INC",
+    "CIK": "0001459200",
+    "Ticker": "alrm"
+  },
+  {
+    "Company": "ALLDIGITAL HOLDINGS INC",
+    "CIK": "0001389217",
+    "Ticker": "adgl"
+  },
+  {
+    "Company": "ALTAIR ENGINEERING INC",
+    "CIK": "0001701732",
+    "Ticker": "altr"
+  },
+  {
+    "Company": "ALTERYX INC",
+    "CIK": "0001689923",
+    "Ticker": "ayx"
+  },
+  {
+    "Company": "AMERICAN SECURITY RES CORP",
+    "CIK": "0001085069",
+    "Ticker": "arsc"
+  },
+  {
+    "Company": "AMERICAN SOFTWARE  -CL A",
+    "CIK": "0000713425",
+    "Ticker": "amswa"
+  },
+  {
+    "Company": "ANAPLAN INC",
+    "CIK": "0001540755",
+    "Ticker": "plan"
+  },
+  {
+    "Company": "ANSYS INC",
+    "CIK": "0001013462",
+    "Ticker": "anss"
+  },
+  {
+    "Company": "APPFOLIO INC",
+    "CIK": "0001433195",
+    "Ticker": "appf"
+  },
+  {
+    "Company": "APPIAN CORP",
+    "CIK": "0001441683",
+    "Ticker": "appn"
+  },
+  {
+    "Company": "APPLIED VISUAL SCIENCES INC",
+    "CIK": "0000873198",
+    "Ticker": "apvs"
+  },
+  {
+    "Company": "APT SYSTEMS INC",
+    "CIK": "0001543739",
+    "Ticker": "apty"
+  },
+  {
+    "Company": "ASANA INC",
+    "CIK": "0001477720",
+    "Ticker": "asan"
+  },
+  {
+    "Company": "ASPEN TECHNOLOGY INC",
+    "CIK": "0000356942",
+    "Ticker": "azpn"
+  },
+  {
+    "Company": "ASURE SOFTWARE INC",
+    "CIK": "0000884144",
+    "Ticker": "asur"
+  },
+  {
+    "Company": "AUDIOEYE INC",
+    "CIK": "0001362190",
+    "Ticker": "aeye"
+  },
+  {
+    "Company": "AUTODESK INC",
+    "CIK": "0000769397",
+    "Ticker": "adsk"
+  },
+  {
+    "Company": "AUTOMATIC DATA PROCESSING INC",
+    "CIK": "0000008670",
+    "Ticker": "adp"
+  },
+  {
+    "Company": "AVALARA INC",
+    "CIK": "0001348036",
+    "Ticker": "avlr"
+  },
+  {
+    "Company": "AVAYA HLDGS CORP",
+    "CIK": "0001418100",
+    "Ticker": "avya"
+  },
+  {
+    "Company": "AWARE INC",
+    "CIK": "0000845188",
+    "Ticker": "awre"
+  },
+  {
+    "Company": "BARRACUDA NETWORKS INC",
+    "CIK": "0001348334",
+    "Ticker": "cuda"
+  },
+  {
+    "Company": "BENEFITFOCUS INC",
+    "CIK": "0001576169",
+    "Ticker": "bnft"
+  },
+  {
+    "Company": "BENTLEY SYSTEMS INC",
+    "CIK": "0001031308",
+    "Ticker": "bsy"
+  },
+  {
+    "Company": "BIGCOMMERCE HOLDIN INC",
+    "CIK": "0001626450",
+    "Ticker": "bigc"
+  },
+  {
+    "Company": "BILL.COM HOLDINGS INC",
+    "CIK": "0001786352",
+    "Ticker": "bill"
+  },
+  {
+    "Company": "BIO-KEY INTERNATIONAL INC",
+    "CIK": "0001019034",
+    "Ticker": "bkyi"
+  },
+  {
+    "Company": "BLACK BOX CORP",
+    "CIK": "0000849547",
+    "Ticker": "bbox"
+  },
+  {
+    "Company": "BLACKBAUD INC",
+    "CIK": "0001280058",
+    "Ticker": "blkb"
+  },
+  {
+    "Company": "BLACKBOXSTOCKS INC",
+    "CIK": "0001567900",
+    "Ticker": "blbx"
+  },
+  {
+    "Company": "BLACKLINE INC",
+    "CIK": "0001666134",
+    "Ticker": "bl"
+  },
+  {
+    "Company": "",
+    "CIK": "",
+    "Ticker": ""
+  },
+  {
+    "Company": "BOTTOMLINE TECHNOLOGIES INC",
+    "CIK": "000109",
+    "Ticker": "epay"
+  },
+  {
+    "Company": "BOX INC",
+    "CIK": "0001345423",
+    "Ticker": "boxl"
+  },
+  {
+    "Company": "BOXLIGHT CORP",
+    "CIK": "0001624512",
+    "Ticker": "boxl"
+  },
+  {
+    "Company": "BRAVATEK SOLUTIONS INC",
+    "CIK": "0001449574",
+    "Ticker": "bvtk"
+  },
+  {
+    "Company": "BRIDGELINE DIGITAL INC",
+    "CIK": "0001378590",
+    "Ticker": "blin"
+  },
+  {
+    "Company": "BRIDGEWAY NATIONAL CORP",
+    "CIK": "0001567771",
+    "Ticker": "bdgy"
+  },
+  {
+    "Company": "B-SCADA INC",
+    "CIK": "0001341878",
+    "Ticker": "scda"
+  },
+  {
+    "Company": "BSQUARE CORP",
+    "CIK": "0001054721",
+    "Ticker": "bsqr"
+  },
+  {
+    "Company": "BUSYBOX.COM INC",
+    "CIK": "0001088316",
+    "Ticker": "busy"
+  },
+  {
+    "Company": "CADENCE DESIGN SYSTEMS INC",
+    "CIK": "0000813672",
+    "Ticker": "cdns"
+  },
+  {
+    "Company": "CDK GLOBAL INC",
+    "CIK": "0001609702",
+    "Ticker": "cdk"
+  },
+  {
+    "Company": "CERENCE INC",
+    "CIK": "0001768267",
+    "Ticker": "crnc"
+  },
+  {
+    "Company": "CERIDIAN CORP",
+    "CIK": "0001124887",
+    "Ticker": "nyse"
+  },
+  {
+    "Company": "CERIDIAN HCM HOLDING",
+    "CIK": "0001725057",
+    "Ticker": "cday"
+  },
+  {
+    "Company": "CHANGSHENG INTERNATIONAL GRO",
+    "CIK": "",
+    "Ticker": "csjt"
+  },
+  {
+    "Company": "CHANNELADVISOR CORP",
+    "CIK": "",
+    "Ticker": "ecom"
+  },
+  {
+    "Company": "CHINA YANYUN YHU NTL ED GRP",
+    "CIK": "",
+    "Ticker": "yyyh"
+  },
+  {
+    "Company": "CICERO INC",
+    "CIK": "0000945384",
+    "Ticker": "cicn"
+  },
+  {
+    "Company": "CIMETRIX INC",
+    "CIK": "0000786620",
+    "Ticker": "cmxx"
+  },
+  {
+    "Company": "CIPHERLOC CORP",
+    "CIK": "0001022505",
+    "Ticker": "clok"
+  },
+  {
+    "Company": "CITRIX SYSTEMS INC",
+    "CIK": "0000877890",
+    "Ticker": "ctxs"
+  },
+  {
+    "Company": "CLEANSPARK INC",
+    "CIK": "0000827876",
+    "Ticker": "clsk"
+  },
+  {
+    "Company": "CLICKSTREAM CORP",
+    "CIK": "0001393548",
+    "Ticker": "clis"
+  },
+  {
+    "Company": "CLONE ALGO TECHNOLOGIES INC",
+    "CIK": "0001582589",
+    "Ticker": "cati"
+  },
+  {
+    "Company": "CLOUDERA INC",
+    "CIK": "0001535379",
+    "Ticker": "cldr"
+  },
+  {
+    "Company": "CLOUDFLARE INC",
+    "CIK": "0001477333",
+    "Ticker": "net"
+  },
+  {
+    "Company": "CLOUDWARD INC",
+    "CIK": "0001045739",
+    "Ticker": "cdwd"
+  },
+  {
+    "Company": "CODE REBEL CORP",
+    "CIK": "0001613011",
+    "Ticker": "cdbrq"
+  },
+  {
+    "Company": "COM GUARD.COM INC",
+    "CIK": "0001103759",
+    "Ticker": "cgud"
+  },
+  {
+    "Company": "COMMVAULT SYSTEMS INC",
+    "CIK": "0001169561",
+    "Ticker": "cvlt"
+  },
+  {
+    "Company": "CORNERSTONE ONDEMAND INC",
+    "CIK": "0001401680",
+    "Ticker": "csod"
+  },
+  {
+    "Company": "COUPA SOFTWARE INC",
+    "CIK": "0001385867",
+    "Ticker": "coup"
+  },
+  {
+    "Company": "CROWDSTRIKE HOLDINGS INC",
+    "CIK": "0001535527",
+    "Ticker": "crwd"
+  },
+  {
+    "Company": "CYBERFORT SOFTWARE INC",
+    "CIK": "0001522787",
+    "Ticker": "cybf"
+  },
+  {
+    "Company": "CYREN LTD",
+    "CIK": "0001084577",
+    "Ticker": "cyrn"
+  },
+  {
+    "Company": "DATADOG INC",
+    "CIK": "0001561550",
+    "Ticker": "ddog"
+  },
+  {
+    "Company": "DATTO HOLDING CORP",
+    "CIK": "0001724570",
+    "Ticker": "msp"
+  },
+  {
+    "Company": "DEALERADVANCE INC",
+    "CIK": "0001133598",
+    "Ticker": "dlad"
+  },
+  {
+    "Company": "DIGILITI MONEY GROUP INC",
+    "CIK": "0001487906",
+    "Ticker": "dglt"
+  },
+  {
+    "Company": "DIGIMARC CORP",
+    "CIK": "0001089443",
+    "Ticker": "dmrc"
+  },
+  {
+    "Company": "DIGITAL TURBINE INC",
+    "CIK": "0000317788",
+    "Ticker": "apps"
+  },
+  {
+    "Company": "DOCUSIGN INC",
+    "CIK": "0001261333",
+    "Ticker": "docu"
+  },
+  {
+    "Company": "DOMO INC",
+    "CIK": "0001505952",
+    "Ticker": "domo"
+  },
+  {
+    "Company": "DROPBOX INC",
+    "CIK": "0001467623",
+    "Ticker": "dbx"
+  },
+  {
+    "Company": "DUCK CREEK TECHNOL INC",
+    "CIK": "0001160951",
+    "Ticker": "dct"
+  },
+  {
+    "Company": "DYNATRACE INC",
+    "CIK": "0001773383",
+    "Ticker": "dt"
+  },
+  {
+    "Company": "E2OPEN INC",
+    "CIK": "0001540400",
+    "Ticker": "etwo"
+  },
+  {
+    "Company": "EBIX INC",
+    "CIK": "0000814549",
+    "Ticker": "ebix"
+  },
+  {
+    "Company": "ECOARK HOLDINGS INC",
+    "CIK": "0001437491",
+    "Ticker": "zest"
+  },
+  {
+    "Company": "EGAIN CORP",
+    "CIK": "0001066194",
+    "Ticker": "agan"
+  },
+  {
+    "Company": "ELASTIC NETWORKS INC",
+    "CIK": "0001088242",
+    "Ticker": "estc"
+  },
+  {
+    "Company": "ELASTIC NV",
+    "CIK": "0001707753",
+    "Ticker": "estc"
+  },
+  {
+    "Company": "ELCOM INTERNATIONAL INC",
+    "CIK": "0000900096",
+    "Ticker": "elco"
+  },
+  {
+    "Company": "ENTERPRISE INFORMATICS INC",
+    "CIK": "0000813747",
+    "Ticker": "einf"
+  },
+  {
+    "Company": "ENVESTNET INC",
+    "CIK": "0001337619",
+    "Ticker": "env"
+  },
+  {
+    "Company": "EVERBRIDGE INC",
+    "CIK": "0001437352",
+    "Ticker": "evbg"
+  },
+  {
+    "Company": "EVOLVING SYSTEMS INC",
+    "CIK": "0001052054",
+    "Ticker": "evol"
+  },
+  {
+    "Company": "EZENIA INC",
+    "CIK": "",
+    "Ticker": "ezen"
+  },
+  {
+    "Company": "FAIR ISAAC CORP",
+    "CIK": "0000814547",
+    "Ticker": "fico"
+  },
+  {
+    "Company": "FALCONSTOR SOFTWARE INC",
+    "CIK": "0000922521",
+    "Ticker": "falc"
+  },
+  {
+    "Company": "FANTASY ACES DAILY FANTASY",
+    "CIK": "",
+    "Ticker": "fasdf"
+  },
+  {
+    "Company": "FASTLY INC",
+    "CIK": "0001517413",
+    "Ticker": "fsly"
+  },
+  {
+    "Company": "FIREEYE INC",
+    "CIK": "0001370880",
+    "Ticker": "mndt"
+  },
+  {
+    "Company": "FIVE9 INC",
+    "CIK": "0001288847",
+    "Ticker": "fivn"
+  },
+  {
+    "Company": "FLEXSHARES IBOXX 3-YR TAR FD",
+    "CIK": "",
+    "Ticker": "tdtt"
+  },
+  {
+    "Company": "FLEXSHARES IBOXX 5-YR TAR FD",
+    "CIK": "",
+    "Ticker": "tdtf"
+  },
+  {
+    "Company": "FORTINET INC",
+    "CIK": "0001262039",
+    "Ticker": "ftnt"
+  },
+  {
+    "Company": "FRIENDFINDER NETWORKS INC",
+    "CIK": "0001451951",
+    "Ticker": "ffnt"
+  },
+  {
+    "Company": "GIVEMEPOWER CORP",
+    "CIK": "0001064722",
+    "Ticker": "gmpw"
+  },
+  {
+    "Company": "GRANDPARENTS.COM INC",
+    "CIK": "0001020475",
+    "Ticker": "gpcmq"
+  },
+  {
+    "Company": "GREEN POLKADOT BOX INC",
+    "CIK": "0001159464",
+    "Ticker": "gpdb"
+  },
+  {
+    "Company": "GSE SYSTEMS INC",
+    "CIK": "0000944480",
+    "Ticker": "gvp"
+  },
+  {
+    "Company": "GTY TECHNOLOGY HOLDINGS",
+    "CIK": "0001682325",
+    "Ticker": "gtyh"
+  },
+  {
+    "Company": "GUIDEWIRE SOFTWARE INC",
+    "CIK": "0001528396",
+    "Ticker": "gwre"
+  },
+  {
+    "Company": "HOPTO INC",
+    "CIK": "0001021435",
+    "Ticker": "hpto"
+  },
+  {
+    "Company": "HRSOFT INC",
+    "CIK": "0000917019",
+    "Ticker": "wstm"
+  },
+  {
+    "Company": "HUBSPOT INC",
+    "CIK": "0001404655",
+    "Ticker": "hubs"
+  },
+  {
+    "Company": "IBSG INTERNATIONAL INC",
+    "CIK": "0001031905",
+    "Ticker": "ibin"
+  },
+  {
+    "Company": "IDEANOMICS INC",
+    "CIK": "0000837852",
+    "Ticker": "idex"
+  },
+  {
+    "Company": "IMAGEWARE SYSTEMS INC",
+    "CIK": "0000941685",
+    "Ticker": "iwsy"
+  },
+  {
+    "Company": "INFORMATION RESOURCES INC",
+    "CIK": "0000714278",
+    "Ticker": "iric"
+  },
+  {
+    "Company": "INTEGRATED BUSINESS SYS &SVC",
+    "CIK": "",
+    "Ticker": "ibss"
+  },
+  {
+    "Company": "INTELLIGENT SYSTEM CORP",
+    "CIK": "0000320340",
+    "Ticker": "ccrd"
+  },
+  {
+    "Company": "INTELLINETICS INC",
+    "CIK": "0001081745",
+    "Ticker": "inlx"
+  },
+  {
+    "Company": "INTERMAP TECHNOLOGIES CORP",
+    "CIK": "0001285170",
+    "Ticker": "imp.to"
+  },
+  {
+    "Company": "INTERNATIONAL LEADERS CAP CO",
+    "CIK": "0001470550",
+    "Ticker": "cap"
+  },
+  {
+    "Company": "INTRUSION INC",
+    "CIK": "0000736012",
+    "Ticker": "intz"
+  },
+  {
+    "Company": "INTUIT INC",
+    "CIK": "0000896878",
+    "Ticker": "intu"
+  },
+  {
+    "Company": "INUVO INC",
+    "CIK": "0000829323",
+    "Ticker": "inuv"
+  },
+  {
+    "Company": "IRONCLAD ENCRYPTION CORP",
+    "CIK": "0001455926",
+    "Ticker": "irnc"
+  },
+  {
+    "Company": "ISHARES IBOXX HIGH YLD CP BD",
+    "CIK": "",
+    "Ticker": "hyg"
+  },
+  {
+    "Company": "ISHARES IBOXX INVST GR CP BD",
+    "CIK": "0001100663",
+    "Ticker": "lqd"
+  },
+  {
+    "Company": "ISIGN SOLUTIONS INC",
+    "CIK": "0000727634",
+    "Ticker": "isign"
+  },
+  {
+    "Company": "ISOCIALY INC",
+    "CIK": "0001716726",
+    "Ticker": "rtme"
+  },
+  {
+    "Company": "ISSUER DIRECT CORP",
+    "CIK": "0000843006",
+    "Ticker": "isdr"
+  },
+  {
+    "Company": "IVEDA SOLUTIONS INC",
+    "CIK": "0001397183",
+    "Ticker": "ivda"
+  },
+  {
+    "Company": "J2 GLOBAL INC",
+    "CIK": "0001084048",
+    "Ticker": "zd"
+  },
+  {
+    "Company": "JACK IN THE BOX INC",
+    "CIK": "0001064030",
+    "Ticker": "jack"
+  },
+  {
+    "Company": "JAMF HOLDING CORP",
+    "CIK": "0001721947",
+    "Ticker": "jamf"
+  },
+  {
+    "Company": "JDA SOFTWARE GROUP INC",
+    "CIK": "0001006892",
+    "Ticker": "jdas"
+  },
+  {
+    "Company": "JFROG LTD",
+    "CIK": "0001800667",
+    "Ticker": "frog"
+  },
+  {
+    "Company": "KIWIBOX COM INC",
+    "CIK": "0000838796",
+    "Ticker": "kiwb"
+  },
+  {
+    "Company": "KRONOS INC",
+    "CIK": "0000886903",
+    "Ticker": "kro"
+  },
+  {
+    "Company": "LAWSON SOFTWARE INC",
+    "CIK": "0001344632",
+    "Ticker": "lwsn"
+  },
+  {
+    "Company": "LEVELBLOX INC",
+    "CIK": "0001473654",
+    "Ticker": ""
+  },
+  {
+    "Company": "LIQUI-BOX CORP",
+    "CIK": "0000216430",
+    "Ticker": ""
+  },
+  {
+    "Company": "LIQUID HOLDINGS GROUP INC",
+    "CIK": "0001562594",
+    "Ticker": "liqdq"
+  },
+  {
+    "Company": "LIVE MICROSYSTEMS INC",
+    "CIK": "0001308446",
+    "Ticker": "lmsc"
+  },
+  {
+    "Company": "LIVEPERSON INC",
+    "CIK": "0001102993",
+    "Ticker": "lpsn"
+  },
+  {
+    "Company": "MAIL BOXES ETC",
+    "CIK": "0000791014",
+    "Ticker": "mail"
+  },
+  {
+    "Company": "MANHATTAN ASSOCIATES INC",
+    "CIK": "0001056696",
+    "Ticker": "manh"
+  },
+  {
+    "Company": "MARIN SOFTWARE INC",
+    "CIK": "0001389002",
+    "Ticker": "mrin"
+  },
+  {
+    "Company": "MAX SOUND CORP",
+    "CIK": "0001353499",
+    "Ticker": "maxd"
+  },
+  {
+    "Company": "MEDALLIA INC",
+    "CIK": "0001540184",
+    "Ticker": "mdla"
+  },
+  {
+    "Company": "MEDALLIANCE INC",
+    "CIK": "0000886037",
+    "Ticker": "meda"
+  },
+  {
+    "Company": "MEDIATECHNICS CORP",
+    "CIK": "0001084726",
+    "Ticker": "medt"
+  },
+  {
+    "Company": "MGT CAPITAL INVESTMENTS INC",
+    "CIK": "0001001601",
+    "Ticker": "mgti"
+  },
+  {
+    "Company": "MICROSOFT CORP",
+    "CIK": "0000789019",
+    "Ticker": "msft"
+  },
+  {
+    "Company": "MICROSTRATEGY INC",
+    "CIK": "0001050446",
+    "Ticker": "mstr"
+  },
+  {
+    "Company": "MITEK SYSTEMS INC",
+    "CIK": "0000807863",
+    "Ticker": "mitk"
+  },
+  {
+    "Company": "MIX TELEMATICS LTD",
+    "CIK": "0001576914",
+    "Ticker": "mixt"
+  },
+  {
+    "Company": "MOBILEIRON INC",
+    "CIK": "0001470099",
+    "Ticker": "mobl"
+  },
+  {
+    "Company": "MODEL N INC",
+    "CIK": "0001118417",
+    "Ticker": "modn"
+  },
+  {
+    "Company": "MONGODB INC",
+    "CIK": "0001441816",
+    "Ticker": "mdb"
+  },
+  {
+    "Company": "MONSTER ARTS",
+    "CIK": "0001423746",
+    "Ticker": "appz"
+  },
+  {
+    "Company": "NCINO INC",
+    "CIK": "0001566895",
+    "Ticker": "ncno"
+  },
+  {
+    "Company": "NEOMEDIA TECHNOLOGIES INC",
+    "CIK": "0001022701",
+    "Ticker": "neom"
+  },
+  {
+    "Company": "NETSOL TECHNOLOGIES INC",
+    "CIK": "0001039280",
+    "Ticker": "ntwk"
+  },
+  {
+    "Company": "NEW RELIC INC",
+    "CIK": "0001448056",
+    "Ticker": "newr"
+  },
+  {
+    "Company": "NORTONLIFELOCK INC",
+    "CIK": "0000849399",
+    "Ticker": "nlok"
+  },
+  {
+    "Company": "NOTIFY TECHNOLOGY CORP",
+    "CIK": "0001031980",
+    "Ticker": "ntfy"
+  },
+  {
+    "Company": "NUANCE COMMUNICATIONS INC",
+    "CIK": "0001002517",
+    "Ticker": "nuan"
+  },
+  {
+    "Company": "NUTANIX INC",
+    "CIK": "0001618732",
+    "Ticker": "ntnx"
+  },
+  {
+    "Company": "OBLONG INC",
+    "CIK": "0000746210",
+    "Ticker": "oblg"
+  },
+  {
+    "Company": "OKTA INC",
+    "CIK": "0001660134",
+    "Ticker": "okta"
+  },
+  {
+    "Company": "OMTOOL LTD",
+    "CIK": "0001020579",
+    "Ticker": "omtl"
+  },
+  {
+    "Company": "ONESPAN INC",
+    "CIK": "0001044777",
+    "Ticker": "ospn"
+  },
+  {
+    "Company": "ORACLE CORP",
+    "CIK": "0001341439",
+    "Ticker": "orcl"
+  },
+  {
+    "Company": "PAGERDUTY INC",
+    "CIK": "0001568100",
+    "Ticker": "pd"
+  },
+  {
+    "Company": "PAID INC",
+    "CIK": "0001017655",
+    "Ticker": "payd"
+  },
+  {
+    "Company": "PALANTIR TECHNOLOG INC",
+    "CIK": "0001321655",
+    "Ticker": "pltr"
+  },
+  {
+    "Company": "PALO ALTO NETWORKS INC",
+    "CIK": "0001327567",
+    "Ticker": "panw"
+  },
+  {
+    "Company": "PARETEUM CORP",
+    "CIK": "0001084384",
+    "Ticker": "teum"
+  },
+  {
+    "Company": "PARK CITY GROUP INC",
+    "CIK": "0000050471",
+    "Ticker": "pcyg"
+  },
+  {
+    "Company": "PAYBOX CORP",
+    "CIK": "0000879703",
+    "Ticker": "pbox"
+  },
+  {
+    "Company": "PAYCHEX INC",
+    "CIK": "0000723531",
+    "Ticker": "payx"
+  },
+  {
+    "Company": "PAYCOM SOFTWARE INC",
+    "CIK": "0001590955",
+    "Ticker": "payc"
+  },
+  {
+    "Company": "PAYLOCITY HOLDING CORP",
+    "CIK": "0001591698",
+    "Ticker": "pcty"
+  },
+  {
+    "Company": "PEGASYSTEMS INC",
+    "CIK": "0001013857",
+    "Ticker": "pega"
+  },
+  {
+    "Company": "PHUNWARE INC",
+    "CIK": "0001665300",
+    "Ticker": "phun"
+  },
+  {
+    "Company": "PING IDENTITY HOLDING CORP",
+    "CIK": "0001679826",
+    "Ticker": "ping"
+  },
+  {
+    "Company": "PLURALSIGHT INC",
+    "CIK": "0001725579",
+    "Ticker": "ps"
+  },
+  {
+    "Company": "PRIMAL SOLUTIONS INC",
+    "CIK": "0001124217",
+    "Ticker": "pmso"
+  },
+  {
+    "Company": "PROGRESS SOFTWARE CORP",
+    "CIK": "0000876167",
+    "Ticker": "prgs"
+  },
+  {
+    "Company": "PROOFPOINT INC",
+    "CIK": "0001212458",
+    "Ticker": "pfpt"
+  },
+  {
+    "Company": "PROS HOLDINGS INC",
+    "CIK": "0001392972",
+    "Ticker": "pro"
+  },
+  {
+    "Company": "PTC INC",
+    "CIK": "0000857005",
+    "Ticker": "ptc"
+  },
+  {
+    "Company": "PULSE EVOLUTION CORP",
+    "CIK": "0001583138",
+    "Ticker": "plfx"
+  },
+  {
+    "Company": "Q2 HOLDINGS INC",
+    "CIK": "0001410384",
+    "Ticker": "qtwo"
+  },
+  {
+    "Company": "QAD INC",
+    "CIK": "0001036188",
+    "Ticker": "qada"
+  },
+  {
+    "Company": "QUALYS INC",
+    "CIK": "0001107843",
+    "Ticker": "qlys"
+  },
+  {
+    "Company": "QUANTGATE SYSTEMS INC",
+    "CIK": "0001464766",
+    "Ticker": "qgsi"
+  },
+  {
+    "Company": "QUMU CORP",
+    "CIK": "0000892482",
+    "Ticker": "qumu"
+  },
+  {
+    "Company": "RAADR INC",
+    "CIK": "0001384365",
+    "Ticker": "rdar"
+  },
+  {
+    "Company": "RAND WORLDWIDE INC",
+    "CIK": "0000852437",
+    "Ticker": "rwwi"
+  },
+  {
+    "Company": "RAPID7 INC",
+    "CIK": "0001560327",
+    "Ticker": "rpd"
+  },
+  {
+    "Company": "REALNETWORKS INC",
+    "CIK": "0001046327",
+    "Ticker": "rnwk"
+  },
+  {
+    "Company": "REALPAGE INC",
+    "CIK": "0001286225",
+    "Ticker": "rp"
+  },
+  {
+    "Company": "RIGHTSCORP INC",
+    "CIK": "0001506270",
+    "Ticker": "riht"
+  },
+  {
+    "Company": "RINGCENTRAL INC",
+    "CIK": "0001500528",
+    "Ticker": "rng"
+  },
+  {
+    "Company": "RIOT BLOCKCHAIN INC",
+    "CIK": "0001167419",
+    "Ticker": "riot"
+  },
+  {
+    "Company": "ROCKETFUEL BLOCKCHAIN INC",
+    "CIK": "0000823546",
+    "Ticker": "rkfl"
+  },
+  {
+    "Company": "RORINE INTL HOLDING CORP",
+    "CIK": "0001423586",
+    "Ticker": "rihc"
+  },
+  {
+    "Company": "ROSETTA STONE INC",
+    "CIK": "0001351285",
+    "Ticker": "rst"
+  },
+  {
+    "Company": "SAILPOINT TECHNO HLDG",
+    "CIK": "0001627857",
+    "Ticker": "sail"
+  },
+  {
+    "Company": "SALESFORCE.COM INC",
+    "CIK": "0001108524",
+    "Ticker": "crm"
+  },
+  {
+    "Company": "SCIENT INC",
+    "CIK": "0001158019",
+    "Ticker": "scntq"
+  },
+  {
+    "Company": "SEACHANGE INTERNATIONAL INC",
+    "CIK": "0001019671",
+    "Ticker": "seac"
+  },
+  {
+    "Company": "SECUREWORKS CORP",
+    "CIK": "0001468666",
+    "Ticker": "scwx"
+  },
+  {
+    "Company": "SERVICENOW INC",
+    "CIK": "0001373715",
+    "Ticker": "now"
+  },
+  {
+    "Company": "SHARPSPRING INC",
+    "CIK": "0001506439",
+    "Ticker": "shsp"
+  },
+  {
+    "Company": "SHOTSPOTTER INC",
+    "CIK": "0001362853",
+    "Ticker": "ssti"
+  },
+  {
+    "Company": "SIMTROL INC",
+    "CIK": "0000846775",
+    "Ticker": "smrl"
+  },
+  {
+    "Company": "SITO MOBILE LTD",
+    "CIK": "0001157817",
+    "Ticker": "sitoq"
+  },
+  {
+    "Company": "SKYBOX INTL INC",
+    "CIK": "0000909687",
+    "Ticker": ""
+  },
+  {
+    "Company": "SLACK TECHNOLOGIES INC",
+    "CIK": "0001764925",
+    "Ticker": "work"
+  },
+  {
+    "Company": "SMARTMETRIC INC",
+    "CIK": "0001301991",
+    "Ticker": "smme"
+  },
+  {
+    "Company": "SMARTSHEET INC",
+    "CIK": "0001366561",
+    "Ticker": "smar"
+  },
+  {
+    "Company": "SMITH MICRO SOFTWARE INC",
+    "CIK": "0000948708",
+    "Ticker": "smsi"
+  },
+  {
+    "Company": "SNOWFLAKE INC",
+    "CIK": "0001640147",
+    "Ticker": "snow"
+  },
+  {
+    "Company": "SOFTECH INC",
+    "CIK": "0000354260",
+    "Ticker": "soft"
+  },
+  {
+    "Company": "SOLARWINDS CORP",
+    "CIK": "0001739942",
+    "Ticker": "swi"
+  },
+  {
+    "Company": "SONIC FOUNDRY INC",
+    "CIK": "0001029744",
+    "Ticker": "sofo"
+  },
+  {
+    "Company": "SPLUNK INC",
+    "CIK": "0001353283",
+    "Ticker": "splk"
+  },
+  {
+    "Company": "SPROUT SOCIAL INC",
+    "CIK": "0001517375",
+    "Ticker": "spt"
+  },
+  {
+    "Company": "SPS COMMERCE INC",
+    "CIK": "0001092699",
+    "Ticker": "spsc"
+  },
+  {
+    "Company": "SS&C TECHNOLOGIES HLDGS INC",
+    "CIK": "0001402436",
+    "Ticker": "ssnc"
+  },
+  {
+    "Company": "SSI INVESTMENTS II LTD",
+    "CIK": "0001501919",
+    "Ticker": ""
+  },
+  {
+    "Company": "SUMO LOGIC INC",
+    "CIK": "0001643269",
+    "Ticker": "sumo"
+  },
+  {
+    "Company": "SVMK INC",
+    "CIK": "0001739936",
+    "Ticker": "mntv"
+  },
+  {
+    "Company": "SYNACOR INC",
+    "CIK": "0001210634",
+    "Ticker": "sync"
+  },
+  {
+    "Company": "SYNCHRONOSS TECHNOLOGIES",
+    "CIK": "0001131554",
+    "Ticker": "sncr"
+  },
+  {
+    "Company": "SYNOPSYS INC",
+    "CIK": "0000883241",
+    "Ticker": "snps"
+  },
+  {
+    "Company": "TAUTACHROME INC",
+    "CIK": "0001389067",
+    "Ticker": "ttcm"
+  },
+  {
+    "Company": "TELENAV INC",
+    "CIK": "0001353536",
+    "Ticker": "tnav"
+  },
+  {
+    "Company": "TENABLE HOLDINGS INC",
+    "CIK": "0001660280",
+    "Ticker": "tenb"
+  },
+  {
+    "Company": "TERADATA CORP",
+    "CIK": "0000320045",
+    "Ticker": "tdc"
+  },
+  {
+    "Company": "THEGLOBE.COM INC",
+    "CIK": "0001066684",
+    "Ticker": "tglo"
+  },
+  {
+    "Company": "TIBCO SOFTWARE INC",
+    "CIK": "0001085280",
+    "Ticker": "tibx"
+  },
+  {
+    "Company": "TINTRI INC",
+    "CIK": "0001554875",
+    "Ticker": "tntrq"
+  },
+  {
+    "Company": "TMM INC",
+    "CIK": "0000939652",
+    "Ticker": "tmmi"
+  },
+  {
+    "Company": "TRADE DESK INC",
+    "CIK": "0001267936",
+    "Ticker": "ttd"
+  },
+  {
+    "Company": "TWILIO INC",
+    "CIK": "0001447669",
+    "Ticker": "twlo"
+  },
+  {
+    "Company": "TYLER TECHNOLOGIES INC",
+    "CIK": "0000860731",
+    "Ticker": "tyl"
+  },
+  {
+    "Company": "ULTIMATE SOFTWARE GROUP INC",
+    "CIK": "0001016125",
+    "Ticker": "ulti"
+  },
+  {
+    "Company": "UNITRONIX CORP",
+    "CIK": "0000835270",
+    "Ticker": "utrx"
+  },
+  {
+    "Company": "UNITY SOFTWARE INC",
+    "CIK": "0001810806",
+    "Ticker": "u"
+  },
+  {
+    "Company": "UPLAND SOFTWARE INC",
+    "CIK": "0001505155",
+    "Ticker": "upld"
+  },
+  {
+    "Company": "VANCORD CAPITAL INC",
+    "CIK": "0001200528",
+    "Ticker": "vnci"
+  },
+  {
+    "Company": "VARONIS SYSTEMS INC",
+    "CIK": "0001361113",
+    "Ticker": "vrns"
+  },
+  {
+    "Company": "VDO-PH INTERNATIONAL INC",
+    "CIK": "0001499355",
+    "Ticker": "vdph"
+  },
+  {
+    "Company": "VEEVA SYSTEMS INC",
+    "CIK": "0001393052",
+    "Ticker": "veev"
+  },
+  {
+    "Company": "VERB TECHNOLOGY CO INC",
+    "CIK": "0001566610",
+    "Ticker": "verb"
+  },
+  {
+    "Company": "VERINT SYSTEMS INC",
+    "CIK": "0001166388",
+    "Ticker": "vrnt"
+  },
+  {
+    "Company": "VERITONE INC",
+    "CIK": "0001615165",
+    "Ticker": "veri"
+  },
+  {
+    "Company": "VERTEX INC",
+    "CIK": "0001806837",
+    "Ticker": "verx"
+  },
+  {
+    "Company": "VERTICAL COMPUTER SYS INC",
+    "CIK": "0001099509",
+    "Ticker": "vcsy"
+  },
+  {
+    "Company": "VIRNETX HOLDING CORP",
+    "CIK": "0001082324",
+    "Ticker": "vhc"
+  },
+  {
+    "Company": "VIVA ENTERTAINMENT GROUP INC",
+    "CIK": "0001479000",
+    "Ticker": "ottv"
+  },
+  {
+    "Company": "VMWARE INC -CL A",
+    "CIK": "0001124610",
+    "Ticker": "vmw"
+  },
+  {
+    "Company": "VOYAGER DIGITAL LTD",
+    "CIK": "0001827032",
+    "Ticker": "voyg"
+  },
+  {
+    "Company": "VUBOTICS INC",
+    "CIK": "0001100981",
+    "Ticker": "vbtc"
+  },
+  {
+    "Company": "WOD RETAIL SOLUTIONS",
+    "CIK": "0000704366",
+    "Ticker": "wodi"
+  },
+  {
+    "Company": "WORKDAY INC",
+    "CIK": "0001327811",
+    "Ticker": "wday"
+  },
+  {
+    "Company": "WORKIVA INC",
+    "CIK": "0001445305",
+    "Ticker": "wk"
+  },
+  {
+    "Company": "XCELMOBILITY INC",
+    "CIK": "0001465509",
+    "Ticker": "xcll"
+  },
+  {
+    "Company": "XPERI HOLDING CORP",
+    "CIK": "0001803696",
+    "Ticker": "xper"
+  },
+  {
+    "Company": "YAPPN CORP",
+    "CIK": "0001511735",
+    "Ticker": "yppn"
+  },
+  {
+    "Company": "YEXT INC",
+    "CIK": "0001614178",
+    "Ticker": "yext"
+  },
+  {
+    "Company": "ZENDESK INC",
+    "CIK": "0001463172",
+    "Ticker": "zen"
+  },
+  {
+    "Company": "ZIX CORP",
+    "CIK": "0000855612",
+    "Ticker": "zixi"
+  },
+  {
+    "Company": "ZOOM TELEPHONICS INC",
+    "CIK": "0001467761",
+    "Ticker": "minm"
+  },
+  {
+    "Company": "ZOOM VIDEO COMUNICATIONS INC",
+    "CIK": "0001585521",
+    "Ticker": "zm"
+  },
+  {
+    "Company": "ZOOMAWAY TRAVEL INC",
+    "CIK": "0001541054",
+    "Ticker": "zma"
+  },
+  {
+    "Company": "ZOOMINFO TECHNOLOGIES",
+    "CIK": "0001794515",
+    "Ticker": "zi"
+  },
+  {
+    "Company": "ZSCALER INC",
+    "CIK": "0001713683",
+    "Ticker": "zs"
+  },
+  {
+    "Company": "ZUORA INC",
+    "CIK": "0001423774",
+    "Ticker": "zuo"
+  }
+]
