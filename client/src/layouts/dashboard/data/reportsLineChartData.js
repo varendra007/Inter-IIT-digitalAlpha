@@ -12,14 +12,31 @@ Coded by www.creative-tim.com
 
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
+import json from "./js2.json"
 
 export default {
-  sales: {
-    labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-    datasets: { label: "Mobile apps", data: [50, 40, 300, 320, 500, 350, 200, 230, 500] },
-  },
-  tasks: {
-    labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-    datasets: { label: "Desktop apps", data: [50, 40, 300, 220, 500, 250, 400, 230, 500] },
-  },
+    NetIncome: {
+        labels: json["Net Income"].time,
+        datasets: json["Net Income"].y,
+    },
+    Income: {
+        labels: json.Income.time,
+        datasets: json.Income.y,
+    },
+    Revenue: {
+        labels: json.Revenue.time,
+        datasets: json.Revenue.y,
+    },
+    Expense: {
+        labels: json.Expense.time,
+        datasets: json.Expense.y,
+    },
+    Loss: {
+        labels: json.Loss.time,
+        datasets: json.Loss.y,
+    },
+    Stock: {
+        labels: json.Stock.time,
+        datasets: json.Stock.y,
+    },
 };
