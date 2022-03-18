@@ -10,10 +10,10 @@ Route:
 Request:
 
 ```js
-/search?cik=##########
+/search?companies=##########&startDate=yyyy-mm-dd&endDate=yyyy-mm-dd
 ```
 
-Query: cik number to be searched for
+Query: cik number to be searched for. In case you need multiple searches (for example, from an arry), you have to call the api multiple times.
 
 Response:
 
@@ -42,39 +42,31 @@ Request: 'http://localhost:5000/search?cik=0001556753'
 Response: {
     "data": {
         "10-k": [
-            "https://www.sec.gov/Archives/edgar/data/1556753/000155724013000348/0001557240-13-000348-index.htm"
+            "https://www.sec.gov/Archives/edgar/data/1459417/000104746918001109/a2234625z10-k.htm",
+            "https://www.sec.gov/Archives/edgar/data/1459417/000110465918008566/a18-5877_110ka.htm"
         ],
         "10-q": [
-            "https://www.sec.gov/Archives/edgar/data/1556753/000149315221011278/0001493152-21-011278-index.htm",
-            "https://www.sec.gov/Archives/edgar/data/1556753/000155724014000353/0001557240-14-000353-index.htm",
-            "https://www.sec.gov/Archives/edgar/data/1556753/000155724014000156/0001557240-14-000156-index.htm",
-            "https://www.sec.gov/Archives/edgar/data/1556753/000155724013000439/0001557240-13-000439-index.htm",
-            "https://www.sec.gov/Archives/edgar/data/1556753/000155724013000160/0001557240-13-000160-index.htm",
-            "https://www.sec.gov/Archives/edgar/data/1556753/000155724013000035/0001557240-13-000035-index.htm",
-            "https://www.sec.gov/Archives/edgar/data/1556753/000155724012000060/0001557240-12-000060-index.htm"
+            "https://www.sec.gov/Archives/edgar/data/1459417/000110465918065981/a18-19025_410q.htm",
+            "https://www.sec.gov/Archives/edgar/data/1459417/000110465918049189/a18-14083_110q.htm",
+            "https://www.sec.gov/Archives/edgar/data/1459417/000110465918030256/a18-8655_110q.htm",
+            "https://www.sec.gov/Archives/edgar/data/1459417/000110465918008573/a18-5877_410qa.htm",
+            "https://www.sec.gov/Archives/edgar/data/1459417/000110465918008571/a18-5877_310qa.htm",
+            "https://www.sec.gov/Archives/edgar/data/1459417/000110465918008570/a18-5877_210qa.htm"
         ],
         "8-k": [
-            "https://www.sec.gov/Archives/edgar/data/1556753/000149315221015502/0001493152-21-015502-index.htm",
-            "https://www.sec.gov/Archives/edgar/data/1556753/000149315221014744/0001493152-21-014744-index.htm",
-            "https://www.sec.gov/Archives/edgar/data/1556753/000149315221011779/0001493152-21-011779-index.htm",
-            "https://www.sec.gov/Archives/edgar/data/1556753/000149315221005286/0001493152-21-005286-index.htm",
-            "https://www.sec.gov/Archives/edgar/data/1556753/000155724014000564/0001557240-14-000564-index.htm",
-            "https://www.sec.gov/Archives/edgar/data/1556753/000155724014000420/0001557240-14-000420-index.htm",
-            "https://www.sec.gov/Archives/edgar/data/1556753/000155724014000190/0001557240-14-000190-index.htm",
-            "https://www.sec.gov/Archives/edgar/data/1556753/000155724014000189/0001557240-14-000189-index.htm",
-            "https://www.sec.gov/Archives/edgar/data/1556753/000155724014000181/0001557240-14-000181-index.htm",
-            "https://www.sec.gov/Archives/edgar/data/1556753/000155724014000176/0001557240-14-000176-index.htm",
-            "https://www.sec.gov/Archives/edgar/data/1556753/000155724014000162/0001557240-14-000162-index.htm",
-            "https://www.sec.gov/Archives/edgar/data/1556753/000155724014000141/0001557240-14-000141-index.htm",
-            "https://www.sec.gov/Archives/edgar/data/1556753/000155724014000099/0001557240-14-000099-index.htm",
-            "https://www.sec.gov/Archives/edgar/data/1556753/000155724014000063/0001557240-14-000063-index.htm",
-            "https://www.sec.gov/Archives/edgar/data/1556753/000155724014000051/0001557240-14-000051-index.htm",
-            "https://www.sec.gov/Archives/edgar/data/1556753/000155724014000022/0001557240-14-000022-index.htm",
-            "https://www.sec.gov/Archives/edgar/data/1556753/000155724013000354/0001557240-13-000354-index.htm",
-            "https://www.sec.gov/Archives/edgar/data/1556753/000155724013000351/0001557240-13-000351-index.htm",
-            "https://www.sec.gov/Archives/edgar/data/1556753/000155724013000344/0001557240-13-000344-index.htm",
-            "https://www.sec.gov/Archives/edgar/data/1556753/000155724013000288/0001557240-13-000288-index.htm",
-            "https://www.sec.gov/Archives/edgar/data/1556753/000155724013000002/0001557240-13-000002-index.htm"
+            "https://www.sec.gov/Archives/edgar/data/1459417/000110465918071972/a18-41232_18k.htm",
+            "https://www.sec.gov/Archives/edgar/data/1459417/000110465918065972/a18-39512_18k.htm",
+            "https://www.sec.gov/Archives/edgar/data/1459417/000110465918049171/a18-18170_18k.htm",
+            "https://www.sec.gov/Archives/edgar/data/1459417/000110465918042583/a18-16143_18k.htm",
+            "https://www.sec.gov/Archives/edgar/data/1459417/000110465918036724/a18-14580_18k.htm",
+            "https://www.sec.gov/Archives/edgar/data/1459417/000110465918035996/a18-13827_48k.htm",
+            "https://www.sec.gov/Archives/edgar/data/1459417/000110465918034799/a18-13950_18k.htm",
+            "https://www.sec.gov/Archives/edgar/data/1459417/000110465918031712/a18-13240_18k.htm",
+            "https://www.sec.gov/Archives/edgar/data/1459417/000110465918030244/a18-12689_18k.htm",
+            "https://www.sec.gov/Archives/edgar/data/1459417/000110465918027744/a18-12366_18ka.htm",
+            "https://www.sec.gov/Archives/edgar/data/1459417/000110465918012174/a18-1008_48k.htm",
+            "https://www.sec.gov/Archives/edgar/data/1459417/000110465918010942/a18-6519_18k.htm",
+            "https://www.sec.gov/Archives/edgar/data/1459417/000110465918003147/a18-3543_18k.htm"
         ]
     },
     "success": true
