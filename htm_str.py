@@ -1,5 +1,7 @@
-import urllib.request
+import requests
 def con(link):
-    mystr = urllib.request.urlopen(link).read().decode("utf8")
-    return mystr
-print(con("https://www.sec.gov/ix?doc=/Archives/edgar/data/0001459417/000110465920055483/tm2018267d1_8k.htm"))
+    hdr = {'user-agent': 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Mobile Safari/537.36'}
+    html = requests.get(link,headers=hdr)
+    code = html.content
+    return code
+print(con("https://www.sec.gov/Archives/edgar/data/789019/000119312515247530/d54167d8k.htm"))

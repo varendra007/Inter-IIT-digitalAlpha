@@ -36,7 +36,7 @@ import Projects from "layouts/dashboard/components/Projects";
 import OrdersOverview from "layouts/dashboard/components/OrdersOverview";
 
 function Dashboard() {
-  const { sales, tasks } = reportsLineChartData;
+  const { Income, Revenue, Expense, Loss, Stock,NetIncome } = reportsLineChartData;
 
   return (
     <DashboardLayout>
@@ -55,9 +55,9 @@ function Dashboard() {
                   amount: "+55%",
                   label: "than lask week",
                 }}
-              />
-            </MDBox>
-          </Grid>
+              />{" "}
+            </MDBox>{" "}
+          </Grid>{" "}
           <Grid item xs={12} md={6} lg={3}>
             <MDBox mb={1.5}>
               <ComplexStatisticsCard
@@ -69,9 +69,9 @@ function Dashboard() {
                   amount: "+3%",
                   label: "than last month",
                 }}
-              />
-            </MDBox>
-          </Grid>
+              />{" "}
+            </MDBox>{" "}
+          </Grid>{" "}
           <Grid item xs={12} md={6} lg={3}>
             <MDBox mb={1.5}>
               <ComplexStatisticsCard
@@ -84,9 +84,9 @@ function Dashboard() {
                   amount: "+1%",
                   label: "than yesterday",
                 }}
-              />
-            </MDBox>
-          </Grid>
+              />{" "}
+            </MDBox>{" "}
+          </Grid>{" "}
           <Grid item xs={12} md={6} lg={3}>
             <MDBox mb={1.5}>
               <ComplexStatisticsCard
@@ -101,21 +101,51 @@ function Dashboard() {
                 }}
               />
             </MDBox>
-          </Grid>
-        </Grid>
+          </Grid>{" "}
+        </Grid>{" "}
         <MDBox mt={4.5}>
           <Grid container spacing={3}>
             <Grid item xs={12} md={6} lg={4}>
               <MDBox mb={3}>
-                <ReportsBarChart
+                <ReportsLineChart
                   color="info"
                   title="website views"
                   description="Last Campaign Performance"
                   date="campaign sent 2 days ago"
-                  chart={reportsBarChartData}
+                  chart={Income}
                 />
               </MDBox>
             </Grid>
+            <Grid item xs={12} md={6} lg={4}>
+              <MDBox mb={3}>
+                <ReportsLineChart
+                  color="dark"
+                  title="daily sales"
+                  description={
+                    <>
+                      ( <strong> +15 % </strong>) increase in today sales.
+                    </>
+                  }
+                  date="updated 4 min ago"
+                  chart={Revenue}
+                />
+              </MDBox>
+            </Grid>
+            <Grid item xs={12} md={6} lg={4}>
+              <MDBox mb={3}>
+                <ReportsLineChart
+                  color="info"
+                  title="completed tasks"
+                  description="Last Campaign Performance"
+                  date="just updated"
+                  chart={Expense}
+                />
+              </MDBox>
+            </Grid>
+          </Grid>{" "}
+        </MDBox>{" "}
+        <MDBox mt={4.5}>
+          <Grid container spacing={3}>
             <Grid item xs={12} md={6} lg={4}>
               <MDBox mb={3}>
                 <ReportsLineChart
@@ -123,11 +153,11 @@ function Dashboard() {
                   title="daily sales"
                   description={
                     <>
-                      (<strong>+15%</strong>) increase in today sales.
+                      ( <strong> +15 % </strong>) increase in today sales.
                     </>
                   }
                   date="updated 4 min ago"
-                  chart={sales}
+                  chart={Loss}
                 />
               </MDBox>
             </Grid>
@@ -138,24 +168,24 @@ function Dashboard() {
                   title="completed tasks"
                   description="Last Campaign Performance"
                   date="just updated"
-                  chart={tasks}
+                  chart={Stock}
                 />
               </MDBox>
             </Grid>
-          </Grid>
-        </MDBox>
-        <MDBox>
-          <Grid container spacing={3}>
-            <Grid item xs={12} md={6} lg={8}>
-              <Projects />
-            </Grid>
             <Grid item xs={12} md={6} lg={4}>
-              <OrdersOverview />
+              <MDBox mb={3}>
+                <ReportsLineChart
+                  color="success"
+                  title="completed tasks"
+                  description="Last Campaign Performance"
+                  date="just updated"
+                  chart={NetIncome}
+                />
+              </MDBox>
             </Grid>
-          </Grid>
-        </MDBox>
-      </MDBox>
-      <Footer />
+          </Grid>{" "}
+        </MDBox>{" "}
+      </MDBox>{" "}
     </DashboardLayout>
   );
 }
