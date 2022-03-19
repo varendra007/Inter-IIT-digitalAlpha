@@ -288,7 +288,7 @@ function Configurator() {
         <MDBox mt={3} mb={2}>
           <MDButton
             component={Link}
-            href="https://www.creative-tim.com/learning-lab/react/quick-start/material-dashboard/"
+            href="https://github.com/varendra007/Inter-IIT-digitalAlpha/blob/main/README.md/"
             target="_blank"
             rel="noreferrer"
             color={darkMode ? "light" : "dark"}
@@ -300,7 +300,7 @@ function Configurator() {
         </MDBox>
         <MDBox display="flex" justifyContent="center">
           <GitHubButton
-            href="https://github.com/creativetimofficial/material-dashboard-react"
+            href="https://github.com/varendra007/Inter-IIT-digitalAlpha/"
             data-icon="octicon-star"
             data-size="large"
             data-show-count="true"
@@ -314,7 +314,7 @@ function Configurator() {
             <MDTypography variant="h6">Thank you for sharing!</MDTypography>
           </MDBox>
 
-          <MDBox display="flex" justifyContent="center">
+          {/* <MDBox display="flex" justifyContent="center">
             <MDBox mr={1.5}>
               <MDButton
                 component={Link}
@@ -337,7 +337,7 @@ function Configurator() {
               <FacebookIcon />
               &nbsp; Share
             </MDButton>
-          </MDBox>
+          </MDBox> */}
         </MDBox>
       </MDBox>
     </ConfiguratorRoot>
