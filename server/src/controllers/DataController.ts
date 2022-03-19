@@ -2,9 +2,13 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 import axios from 'axios';
-import * as tf from 'tensorflow';
+// import * as shell from 'shelljs';
+// import * as tf from 'tensorflow';
 // import { queryApi } from 'sec-api';
 import { Request, Response, NextFunction } from 'express';
+// import { exec } from 'child_process';
+import * as path from 'path';
+import { Options, PythonShell } from 'python-shell';
 
 import { getEnvironmentVariables } from '../environments/env';
 
@@ -169,7 +173,50 @@ export class DataController {
           required = [ ...required, filing.linkToFilingDetails ];
         }
         // console.log(required);
-        
+        let arg = '';
+        for(const r of required) {
+          arg += `${r} `;
+        }
+        let dataToSend: any;
+        const py_path = path.join(__dirname, 'ML_Model');
+        const python_exe_path = path.join(__dirname, 'ML_Model/scripts/python.exe');
+        const py_shell_options: Options = {
+          mode: 'text',
+          pythonPath: python_exe_path,
+          pythonOptions: ['-u'], // get print results in real-time
+          scriptPath: py_path,
+          args: required
+        };
+        PythonShell.run('final.py', py_shell_options, function (err, results) {
+          if (err) throw err;
+          // results is an array consisting of messages collected during execution
+          console.log('results: %j', results);
+        });
+        // exec(`cd ML_Model && python ./final.py ${arg}`, (err: any, data: any, stderr: any) => {
+        // exec(`sh script.sh`, (err: any, data: any, stderr: any) => {
+        //   console.log('Pipe data from python script ...');
+        //   dataToSend = data;
+        //   if(err) {
+        //     console.log(err);
+        //   }
+        //   if(stderr) {
+        //     console.log(stderr);
+        //   }
+        //   console.log(data);
+        // });
+        // let yourscript = exec('sh script.sh',
+        // (error, stdout, stderr) => {
+        //     console.log(stdout);
+        //     console.log(stderr);
+        //     if (error !== null) {
+        //         console.log(`exec error: ${error}`);
+        //     }
+        // });
+        // shell.exec('pwd');
+        // shell.pwd();
+        // console.log('ML_Model/final.py', `${arg}`);
+        // python.stdout.on('data', );
+        console.log(dataToSend);
         ret['8-k'] = required;
       }
 
