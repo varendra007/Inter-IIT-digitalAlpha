@@ -1,18 +1,3 @@
-/**
-=========================================================
-* Material Dashboard 2 React - v2.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-dashboard-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
 /** 
   All of the routes for the Material Dashboard 2 React are added here,
   You can add a new route, customize the routes and delete the routes here.
@@ -37,6 +22,7 @@ Coded by www.creative-tim.com
 
 // Material Dashboard 2 React layouts
 import Dashboard from "layouts/dashboard";
+import Dashboard_t from "layouts/dashboard/components/dashboard_t";
 import Tables from "layouts/tables";
 import Billing from "layouts/billing";
 import RTL from "layouts/rtl";
@@ -53,15 +39,23 @@ const routes = [
     type: "collapse",
     name: "Dashboard",
     key: "dashboard",
-    icon: <Icon fontSize="small">dashboard</Icon>,
+    icon: <Icon fontSize="small"> dashboard </Icon>,
     route: "/dashboard",
     component: <Dashboard />,
   },
   {
     type: "collapse",
+    name: "Dashboard_t",
+    key: "dashboard_t",
+    icon: <Icon fontSize="small"> dashboard_t </Icon>,
+    route: "/dashboard_t",
+    component: <Dashboard_t />,
+  },
+  {
+    type: "collapse",
     name: "Tables",
     key: "tables",
-    icon: <Icon fontSize="small">table_view</Icon>,
+    icon: <Icon fontSize="small"> table_view </Icon>,
     route: "/tables",
     component: <Tables />,
   },
