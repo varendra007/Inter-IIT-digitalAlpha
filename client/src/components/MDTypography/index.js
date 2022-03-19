@@ -16,8 +16,9 @@ const MDTypography = forwardRef(
         const [controller] = useMaterialUIController();
         const { darkMode } = controller;
 
-        return ( <
-            MDTypographyRoot {...rest }
+        return (
+
+            <MDTypographyRoot {...rest }
             ref = { ref }
             ownerState = {
                 {
@@ -30,8 +31,7 @@ const MDTypography = forwardRef(
                     darkMode,
                 }
             } >
-            { children } <
-            /MDTypographyRoot>
+            { children} </MDTypographyRoot>
         );
     }
 );

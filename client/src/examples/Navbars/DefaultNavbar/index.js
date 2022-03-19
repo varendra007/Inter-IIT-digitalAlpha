@@ -88,23 +88,12 @@ function DefaultNavbar({ transparent, light, action }) {
                 backdropFilter: transparent ? "none" : `saturate(200%) blur(30px)`,
             })
         } >
-        <MDBox component = { Link }
-        to = "/"
-        py = { transparent ? 1.5 : 0.75 }
-        lineHeight = { 1 }
-        pl = {
-            { xs: 0, lg: 1 } } >
-        <MDTypography variant = "button"
-        fontWeight = "bold"
-        color = { light ? "white" : "dark" } >
-        Material Dashboard 2 </MDTypography> </MDBox> 
         <MDBox color = "inherit"
         display = {
             { xs: "none", lg: "flex" } }
         m = { 0 }
         p = { 0 } >
-        <
-        DefaultNavbarLink icon = "donut_large"
+        <DefaultNavbarLink icon = "donut_large"
         name = "dashboard"
         route = "/dashboard"
         light = { light }
@@ -154,7 +143,7 @@ function DefaultNavbar({ transparent, light, action }) {
         sx = {
             { cursor: "pointer" } }
         onClick = { openMobileNavbar } >
-        <Icon fontSize = "default" > { mobileNavbar ? "close" : "menu" } < /Icon> </MDBox> </MDBox> {
+        <Icon fontSize = "default" > { mobileNavbar ? "close" : "menu" } </Icon> </MDBox> </MDBox> {
             mobileView && < DefaultNavbarMobile open = { mobileNavbar }
             close = { closeMobileNavbar }
             />} </Container>
