@@ -360,6 +360,8 @@ export default function SearchBar(props) {
     console.log(end)
     console.log(start)
     // var data = {}
+
+    window.location.href = 'http://localhost:3000/dashboard'
   }
 
   return (

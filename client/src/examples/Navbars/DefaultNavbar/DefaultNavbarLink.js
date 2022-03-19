@@ -26,8 +26,8 @@ function DefaultNavbarLink({ icon, name, route, light }) {
                 verticalAlign: "middle",
             }
         } >
-        { icon } </Icon> <
-        MDTypography variant = "button"
+        { icon } </Icon> 
+        <MDTypography variant = "button"
         fontWeight = "regular"
         color = { light ? "white" : "dark" }
         textTransform = "capitalize"
