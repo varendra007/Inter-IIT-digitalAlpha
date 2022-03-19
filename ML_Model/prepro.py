@@ -6,6 +6,7 @@ from string import punctuation
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.neural_network import MLPClassifier
 import pickle
+import os
 
 # from nltk.corpus import stopwords
 # stopwords_en = stopwords.words('english')
@@ -25,7 +26,9 @@ def extract_entity_name(t):
     return entity_names
 
 def preprocessing(list_of_links):
-    vect_file = open('vectorizer.pkl', 'rb')
+    dirpath = os.path.dirname(os.path.abspath(__file__))
+    chap_dirpath1 = os.path.join(dirpath, 'vectorizer.pkl')
+    vect_file = open(chap_dirpath1, 'rb')
     tfidf_obj = pickle.load(vect_file)
     stopwords_en = stopwords.words('english')
     stopwords_en.append(set(punctuation))
