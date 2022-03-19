@@ -1,5 +1,6 @@
 #environments
 **/*.env.ts
+**/ML_Model
 
 # Logs
 logs

@@ -7,6 +7,11 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.neural_network import MLPClassifier
 import pickle
 
+# from nltk.corpus import stopwords
+# stopwords_en = stopwords.words('english')
+# from string import punctuation
+# stopwords_en.append(set(punctuation))
+
 def extract_entity_name(t):
     entity_names = []
 
@@ -20,7 +25,8 @@ def extract_entity_name(t):
     return entity_names
 
 def preprocessing(list_of_links):
-    tfidf_obj = pickle.load(open('vectorizer.pkl', 'rb'))
+    vect_file = open('vectorizer.pkl', 'rb')
+    tfidf_obj = pickle.load(vect_file)
     stopwords_en = stopwords.words('english')
     stopwords_en.append(set(punctuation))
     modified_files = []
@@ -50,3 +56,5 @@ def preprocessing(list_of_links):
 
     tfidf_test = tfidf_obj.transform(modified_files)
     return tfidf_test
+
+# print(preprocessing(['https://www.sec.gov/Archives/edgar/data/1459417/000110465918071972/a18-41232_18k.htm']))
