@@ -12,7 +12,8 @@ sys.path.append('/'.join(path[:i+1]))
 from ML_Model.final import predict_progress
 
 def index(request):
-    data = json.loads(request.data)
-    arrofstr=data['arr']
-    responseData=json.dumps(predict_progress(arrofstr))
-    return HttpResponse(json.dumps(responseData), content_type="application/json")
+    if request.method == 'POST':
+        json_data = request.POST.get() 
+        arrofstr=json_data['arr']
+        responseData=json.dumps(predict_progress(arrofstr))
+        return HttpResponse(json.dumps(responseData), content_type="application/json")
