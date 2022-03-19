@@ -15,7 +15,7 @@ import json from "../dashboard/data/10kjson1.json";
 function Tables() {
     var grwth=["Will Fall","Will remain Neutral","Will Rise"];
     var clr=["red","blue","green"];
-    var ind=1+1;
+    var ind=1-1;
 
     return ( <DashboardLayout >
         <DashboardNavbar / >
