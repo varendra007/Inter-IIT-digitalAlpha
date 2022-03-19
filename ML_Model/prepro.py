@@ -1,0 +1,52 @@
+import nltk
+import requests
+from bs4 import BeautifulSoup
+from nltk.corpus import stopwords
+from string import punctuation
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.neural_network import MLPClassifier
+import pickle
+
+def extract_entity_name(t):
+    entity_names = []
+
+    if hasattr(t, 'label') and t.label:
+        if t.label() == 'NE':
+            entity_names.append(" ".join([child[0] for child in t]))
+        else:
+            for child in t:
+                entity_names.extend(extract_entity_name(child))
+    
+    return entity_names
+
+def preprocessing(list_of_links):
+    tfidf_obj = pickle.load(open('vectorizer.pkl', 'rb'))
+    stopwords_en = stopwords.words('english')
+    stopwords_en.append(set(punctuation))
+    modified_files = []
+    for pred_file in list_of_links:
+        req = requests.get(pred_file)
+        soup = BeautifulSoup(req.content, 'html.parser')
+
+        sent_token = nltk.sent_tokenize(soup.get_text())
+
+        tagged_sentences = []
+        for i in sent_token:
+            wordslist = nltk.word_tokenize(i)
+            wordslist = [w for w in wordslist if not w in stopwords_en]
+            tagged = nltk.pos_tag(wordslist)
+            tagged_sentences.append(tagged)
+
+
+        chunked_sentences = nltk.ne_chunk_sents(tagged_sentences, binary=True)
+
+        entity_names = []
+        for tree in chunked_sentences:
+            entity_names.extend(extract_entity_name(tree))
+
+        s = " "
+        ip_data = s.join(entity_names)
+        modified_files.append(ip_data)
+
+    tfidf_test = tfidf_obj.transform(modified_files)
+    return tfidf_test
