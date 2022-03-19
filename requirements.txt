@@ -1,0 +1,6 @@
+finnhub-python==2.4.11
+requests==2.27.1
+pickle5==0.0.12
+sklearn==0.0
+nltk==3.7
+BeautifulSoup==3.2.2
