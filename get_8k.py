@@ -16,4 +16,4 @@ def get_fil(ticker, start, end):
     k_8.reverse()
     dates.reverse()
     return k_8, dates
-print(get_fil('aapl', '2015-02-15', '2020-03-14')[0][0])
+print(get_fil('aapl', '2015-02-15', '2020-03-14'))
