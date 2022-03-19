@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-
 // react-router components
 import { useLocation, Link } from "react-router-dom";
 
 // prop-types is a library for typechecking of props.
+import styled from "styled-components";
 import PropTypes from "prop-types";
-
+import { useDebounce } from 'use-debounce';
 // @material-ui core components
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
@@ -21,6 +21,8 @@ import MDInput from "components/MDInput";
 // Material Dashboard 2 React example components
 import Breadcrumbs from "examples/Breadcrumbs";
 import NotificationItem from "examples/Items/NotificationItem";
+
+import { SearchBar } from "../../../components/searchBar";
 
 // Custom styles for DashboardNavbar
 import {
@@ -38,7 +40,8 @@ import {
   setMiniSidenav,
   setOpenConfigurator,
 } from "context";
-
+import { ArrowDropDown } from "@mui/icons-material";
+import { render } from "@testing-library/react";
 function DashboardNavbar({ absolute, light, isMini }) {
   const [navbarType, setNavbarType] = useState();
   const [controller, dispatch] = useMaterialUIController();
@@ -112,76 +115,7 @@ function DashboardNavbar({ absolute, light, isMini }) {
     },
   });
 
-  function similarity(s1, s2) {
-    var longer = s1;
-    var shorter = s2;
-    if (s1.length < s2.length) {
-      longer = s2;
-      shorter = s1;
-    }
-    var longerLength = longer.length;
-    if (longerLength == 0) {
-      return 1.0;
-    }
-    return (longerLength - editDistance(longer, shorter)) / parseFloat(longerLength);
-  }
-
-  function editDistance(s1, s2) {
-    s1 = s1.toLowerCase();
-    s2 = s2.toLowerCase();
-
-    var costs = new Array();
-    for (var i = 0; i <= s1.length; i++) {
-      var lastValue = i;
-      for (var j = 0; j <= s2.length; j++) {
-        if (i == 0) costs[j] = j;
-        else {
-          if (j > 0) {
-            var newValue = costs[j - 1];
-            if (s1.charAt(i - 1) != s2.charAt(j - 1))
-              newValue = Math.min(Math.min(newValue, lastValue), costs[j]) + 1;
-            costs[j - 1] = lastValue;
-            lastValue = newValue;
-          }
-        }
-      }
-      if (i > 0) costs[s2.length] = lastValue;
-    }
-    return costs[s2.length];
-  }
-  const hammingDistance = (str1 = "", str2 = "") => {
-    if (str1.length !== str2.length) {
-      return 0;
-    }
-    let dist = 0;
-    for (let i = 0; i < str1.length; i += 1) {
-      if (str1[i] !== str2[i]) {
-        dist += 1;
-      }
-    }
-    return dist;
-  };
-  const [searchValue, setSearchValue] = useState("");
-  const [comp, setComp] = useState([]);
-  // useEffect(() => {
-  //   console.log(searchValue);
-  // }, [searchValue]);
-  // const handleSearchValue = (text) => {
-  //   setSearchValue(text.target.values);
-  // };
-  const onSubmit = (e) => {
-    e.preventDefault();
-    var li = [];
-    compData.forEach((el) => {
-      var sim = similarity(`${searchValue}`, `${el.Company}`);
-      if (sim >= 0.3 || el.Company.includes(searchValue)) {
-        li.push(el);
-      }
-    });
-
-    console.log(li);
-    setComp(li);
-  };
+  /*Drop Down Menu*/
 
   return (
     <AppBar
@@ -198,22 +132,10 @@ function DashboardNavbar({ absolute, light, isMini }) {
             <MDBox pr={1}>
               {" "}
               {/* <MDInput label="Search here " /> */}{" "}
-              <form action="submit" onSubmit={onSubmit}>
-                <input type="submit" hidden />
-                <input
-                  type="text"
-                  value={searchValue}
-                  onChange={(e) => setSearchValue(e.target.value)}
-                />{" "}
-                <button
-                  type="submit"
-                  onClick={(e) => {
-                    e.preventDefault();
-                  }}
-                >
-                  Search{" "}
-                </button>{" "}
-              </form>{" "}
+              
+              
+                
+              <SearchBar />
             </MDBox>{" "}
             <MDBox color={light ? "white" : "inherit"}>
               {" "}
@@ -260,6 +182,7 @@ function DashboardNavbar({ absolute, light, isMini }) {
           </MDBox>
         )}{" "}
       </Toolbar>{" "}
+      
     </AppBar>
   );
 }
