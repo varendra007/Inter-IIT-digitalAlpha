@@ -21,8 +21,7 @@ function DashboardLayout({ children }) {
         setLayout(dispatch, "dashboard");
     }, [pathname]);
 
-    return ( <
-        MDBox sx = {
+    return ( <MDBox sx = {
             ({ breakpoints, transitions, functions: { pxToRem } }) => ({
                 p: 3,
                 position: "relative",
@@ -36,8 +35,7 @@ function DashboardLayout({ children }) {
                 },
             })
         } >
-        { children } <
-        /MDBox>
+        { children } </MDBox>
     );
 }
 

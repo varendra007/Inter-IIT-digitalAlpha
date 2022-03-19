@@ -73,33 +73,25 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
         let returnValue;
 
         if (type === "collapse") {
-            returnValue = href ? ( <
-                Link href = { href }
+            returnValue = href ? ( <Link href = { href }
                 key = { key }
                 target = "_blank"
                 rel = "noreferrer"
                 sx = {
                     { textDecoration: "none" } } >
-                <
-                SidenavCollapse name = { name }
+                <SidenavCollapse name = { name }
                 icon = { icon }
                 active = { key === collapseName }
                 noCollapse = { noCollapse }
-                /> <
-                /Link>
-            ) : ( <
-                NavLink key = { key }
+                /> </Link>
+            ) : ( <NavLink key = { key }
                 to = { route } >
-                <
-                SidenavCollapse name = { name }
-                icon = { icon }
+                <SidenavCollapse name = { name }icon = { icon }
                 active = { key === collapseName }
-                /> <
-                /NavLink>
+                /> </NavLink>
             );
         } else if (type === "title") {
-            returnValue = ( <
-                MDTypography key = { key }
+            returnValue = ( <MDTypography key = { key }
                 color = { textColor }
                 display = "block"
                 variant = "caption"
@@ -109,12 +101,10 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
                 mt = { 2 }
                 mb = { 1 }
                 ml = { 1 } >
-                { title } <
-                /MDTypography>
+                { title } </MDTypography>
             );
         } else if (type === "divider") {
-            returnValue = ( <
-                Divider key = { key }
+            returnValue = ( <Divider key = { key }
                 light = {
                     (!darkMode && !whiteSidenav && !transparentSidenav) ||
                     (darkMode && !transparentSidenav && whiteSidenav)
@@ -126,18 +116,15 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
         return returnValue;
     });
 
-    return ( <
-        SidenavRoot {...rest }
+    return ( <SidenavRoot {...rest }
         variant = "permanent"
         ownerState = {
             { transparentSidenav, whiteSidenav, miniSidenav, darkMode } } >
-        <
-        MDBox pt = { 3 }
+        <MDBox pt = { 3 }
         pb = { 1 }
         px = { 4 }
         textAlign = "center" >
-        <
-        MDBox display = {
+        <MDBox display = {
             { xs: "block", xl: "none" } }
         position = "absolute"
         top = { 0 }
@@ -146,39 +133,28 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
         onClick = { closeSidenav }
         sx = {
             { cursor: "pointer" } } >
-        <
-        MDTypography variant = "h6"
+        <MDTypography variant = "h6"
         color = "secondary" >
-        <
-        Icon sx = {
-            { fontWeight: "bold" } } > close < /Icon> <
-        /MDTypography> <
-        /MDBox> <
-        MDBox component = { NavLink }
+        <Icon sx = {
+            { fontWeight: "bold" } } > close < /Icon> </MDTypography> </MDBox> 
+            <MDBox component = { NavLink }
         to = "/"
         display = "flex"
         alignItems = "center" > { brand && < MDBox component = "img"
             src = { brand }
             alt = "Brand"
-            width = "2rem" / > } <
-        MDBox width = {!brandName && "100%" }
+            width = "2rem" / > } <MDBox width = {!brandName && "100%" }
         sx = {
             (theme) => sidenavLogoLabel(theme, { miniSidenav }) } >
-        <
-        MDTypography component = "h6"
+        <MDTypography component = "h6"
         variant = "button"
         fontWeight = "medium"
-        color = { textColor } > { brandName } <
-        /MDTypography> <
-        /MDBox> <
-        /MDBox> <
-        /MDBox> <
-        Divider light = {
+        color = { textColor } > { brandName } </MDTypography> </MDBox> </MDBox> 
+        </MDBox> <Divider light = {
             (!darkMode && !whiteSidenav && !transparentSidenav) ||
             (darkMode && !transparentSidenav && whiteSidenav)
         }
-        /> <
-        List > { renderRoutes } < /List> {
+        /> <List > { renderRoutes } < /List> {
             /* <MDBox p={2} mt="auto">
                     <MDButton
                       component="a"
@@ -192,8 +168,7 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
                       upgrade to pro
                     </MDButton>
                   </MDBox> */
-        } <
-        /SidenavRoot>
+        } </SidenavRoot>
     );
 }
 

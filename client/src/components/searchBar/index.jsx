@@ -248,7 +248,10 @@ export function SearchBar(props) {
       transition={containerTransition}
       ref={parentRef}
     >
-      <SearchInputContainer>
+      <form action=""
+      style={{display: 'flex',}}
+      >
+        <SearchInputContainer>
         <SearchIcon>
           <IoSearch />
         </SearchIcon>
@@ -259,6 +262,8 @@ export function SearchBar(props) {
           value={searchQuery}
           onChange={changeHandler}
         />
+       
+      
         <AnimatePresence>
           {isExpanded && (
             <CloseIcon
@@ -274,6 +279,10 @@ export function SearchBar(props) {
           )}
         </AnimatePresence>
       </SearchInputContainer>
+      <input type ="date" />
+      <input type="date" name="end-date" id="" />
+      </form>
+      
       {isExpanded && <LineSeperator />}
       {isExpanded && (
         <SearchContent>
