@@ -2,6 +2,7 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 import axios from 'axios';
+import * as tf from 'tensorflow';
 // import { queryApi } from 'sec-api';
 import { Request, Response, NextFunction } from 'express';
 
@@ -168,6 +169,7 @@ export class DataController {
           required = [ ...required, filing.linkToFilingDetails ];
         }
         // console.log(required);
+        
         ret['8-k'] = required;
       }
 

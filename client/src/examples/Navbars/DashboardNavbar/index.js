@@ -14,7 +14,7 @@ Coded by www.creative-tim.com
 */
 
 import { useState, useEffect } from "react";
-import { useDebounce } from 'use-debounce';
+import { useDebounce, useDebouncedCallback } from 'use-debounce';
 
 // react-router components
 import { useLocation, Link } from "react-router-dom";
@@ -173,7 +173,7 @@ function DashboardNavbar({ absolute, light, isMini }) {
     return dist;
   };
   const [searchValue, setSearchValue] = useState("");
-  const [searchText] = useDebounce(searchValue, 1000);
+  const [searchText] = useDebounce(searchValue, 500);
   const [comp, setComp] = useState([]);
   // useEffect(() => {
   //   console.log(searchValue);
@@ -181,15 +181,25 @@ function DashboardNavbar({ absolute, light, isMini }) {
   // const handleSearchValue = (text) => {
   //   setSearchValue(text.target.values);
   // };
+
+  const debounced = useDebouncedCallback(
+    // function
+    (value) => {
+      setSearchValue(value);
+    },
+    // delay in ms
+    1000
+  );
+
   const onSearch = (e) => {
     // e.preventDefault();
 
-    setSearchValue(e.target.value);
+    debounced(e.target.value);
     setTimeout(() => {
       var li = [];
       compData.forEach((el) => {
-        var sim = similarity(`${searchText}`, `${el.Company}`);
-        if (sim >= 0.3 || el.Company.includes(searchText)) {
+        var sim = similarity(`${searchValue}`, `${el.Company}`);
+        if (sim >= 0.3 || el.Company.includes(searchValue)) {
           li.push(el);
         }
       });
