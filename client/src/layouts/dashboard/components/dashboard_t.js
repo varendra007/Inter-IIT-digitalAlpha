@@ -17,10 +17,21 @@ import ComplexStatisticsCard from "examples/Cards/StatisticsCards/ComplexStatist
 // Dashboard components
 // import Projects from "layouts/dashboard/components/Projects";
 // import OrdersOverview from "layouts/dashboard/components/OrdersOverview";
-import json from "../data/js2.json";
+import json1 from "../data/10qjson1.json";
+import json2 from "../data/10qjson2.json";
+import json3 from "../data/10qjson3.json";
+import json4 from "../data/10qjson4.json";
+import json5 from "../data/10qjson5.json";
+import { useEffect, useState } from "react";
 
 function Dashboard_t() {
   // const { Income, Revenue, Expense, Loss, Stock,NetIncome } = reportsLineChartData;
+  const arr = [json1, json2, json3, json4, json5]
+  const [file, setFile] = useState(json1);
+  useEffect(() => {
+    let x = Math.floor(Math.random() * 5 );
+    setFile(arr[x]);
+  }, []);
 
   return (
     <DashboardLayout>
@@ -29,7 +40,7 @@ function Dashboard_t() {
         <MDBox mt={4.5}>
           <Grid container spacing={3}>
             {" "}
-            {json.results.map((el, ind) => {
+            {file.results.map((el, ind) => {
               return (
                 <>
                   <Grid item xs={12} md={6} lg={4}>
