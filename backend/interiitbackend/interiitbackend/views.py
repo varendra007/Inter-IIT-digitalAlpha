@@ -13,7 +13,13 @@ from ML_Model.final import predict_progress
 
 def index(request):
     if request.method == 'POST':
-        json_data = request.POST.get() 
+        # print(request.body)
+        json_data = json.loads(request.body)
+        # print(json_data)
         arrofstr=json_data['arr']
-        responseData=json.dumps(predict_progress(arrofstr))
+        # responseData=json.dumps(predict_progress(arrofstr))
+        returned_list = predict_progress(arrofstr)
+        res_dct = {str(i): str(returned_list[i]) for i in range(len(returned_list))}
+        responseData = json.dumps(res_dct)
+        #return HttpResponse(json.dumps(responseData), content_type="application/json")
         return HttpResponse(json.dumps(responseData), content_type="application/json")
