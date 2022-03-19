@@ -10,12 +10,11 @@
 		"watch-ts": "tsc -w",
     "dev": "nodemon --exec ts-node src/index.ts",
     "create-bundle": "tsc && node dist/index.js",
-    "start": "node dist/index.js",
     "format": "prettier --write \"**/*.{ts,tsx,js,scss}\" && npm run lint:fix",
     "format-check": "prettier --check \"**/*.{ts,tsx,js,scss}\"",
     "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write"
   },
-  "author": "Atul Singh",
+  "author": "Samy",
   "license": "ISC",
   "dependencies": {
     "@types/cookie-parser": "^1.4.2",
