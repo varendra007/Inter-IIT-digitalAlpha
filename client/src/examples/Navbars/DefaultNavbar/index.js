@@ -60,10 +60,9 @@ function DefaultNavbar({ transparent, light, action }) {
         return () => window.removeEventListener("resize", displayMobileNavbar);
     }, []);
 
-    return ( <
-        Container >
-        <
-        MDBox py = { 1 }
+     return ( 
+     <Container >
+        <MDBox py = { 1 }
         px = {
             { xs: 4, sm: transparent ? 2 : 3, lg: transparent ? 0 : 2 } }
         my = { 3 }
@@ -89,21 +88,17 @@ function DefaultNavbar({ transparent, light, action }) {
                 backdropFilter: transparent ? "none" : `saturate(200%) blur(30px)`,
             })
         } >
-        <
-        MDBox component = { Link }
+        <MDBox component = { Link }
         to = "/"
         py = { transparent ? 1.5 : 0.75 }
         lineHeight = { 1 }
         pl = {
             { xs: 0, lg: 1 } } >
-        <
-        MDTypography variant = "button"
+        <MDTypography variant = "button"
         fontWeight = "bold"
         color = { light ? "white" : "dark" } >
-        Material Dashboard 2 <
-        /MDTypography> <
-        /MDBox> <
-        MDBox color = "inherit"
+        Material Dashboard 2 </MDTypography> </MDBox> 
+        <MDBox color = "inherit"
         display = {
             { xs: "none", lg: "flex" } }
         m = { 0 }
@@ -127,26 +122,19 @@ function DefaultNavbar({ transparent, light, action }) {
                         route="/authentication/sign-in"
                         light={light}
                       /> */
-        } <
-        /MDBox> {
+        } </MDBox> {
             action &&
-                (action.type === "internal" ? ( <
-                    MDBox display = {
+                (action.type === "internal" ? ( <MDBox display = {
                         { xs: "none", lg: "inline-block" } } >
-                    <
-                    MDButton component = { Link }
+                    <MDButton component = { Link }
                     to = { action.route }
                     variant = "gradient"
                     color = { action.color ? action.color : "info" }
                     size = "small" >
-                    { action.label } <
-                    /MDButton> <
-                    /MDBox>
-                ) : ( <
-                    MDBox display = {
+                    { action.label } </MDButton> </MDBox>
+                ) : ( <MDBox display = {
                         { xs: "none", lg: "inline-block" } } >
-                    <
-                    MDButton component = "a"
+                    <MDButton component = "a"
                     href = { action.route }
                     target = "_blank"
                     rel = "noreferrer"
@@ -155,12 +143,9 @@ function DefaultNavbar({ transparent, light, action }) {
                     size = "small"
                     sx = {
                         { mt: -0.3 } } >
-                    { action.label } <
-                    /MDButton> <
-                    /MDBox>
+                    { action.label } </MDButton> </MDBox>
                 ))
-        } <
-        MDBox display = {
+        } <MDBox display = {
             { xs: "inline-block", lg: "none" } }
         lineHeight = { 0 }
         py = { 1.5 }
@@ -169,14 +154,10 @@ function DefaultNavbar({ transparent, light, action }) {
         sx = {
             { cursor: "pointer" } }
         onClick = { openMobileNavbar } >
-        <
-        Icon fontSize = "default" > { mobileNavbar ? "close" : "menu" } < /Icon> <
-        /MDBox> <
-        /MDBox> {
+        <Icon fontSize = "default" > { mobileNavbar ? "close" : "menu" } < /Icon> </MDBox> </MDBox> {
             mobileView && < DefaultNavbarMobile open = { mobileNavbar }
             close = { closeMobileNavbar }
-            />} <
-            /Container>
+            />} </Container>
         );
     }
 

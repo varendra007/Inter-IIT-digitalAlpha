@@ -37,7 +37,7 @@ import Icon from "@mui/material/Icon";
 const routes = [
   {
     type: "collapse",
-    name: "Dashboard",
+    name: "10-K",
     key: "dashboard",
     icon: <Icon fontSize="small"> dashboard </Icon>,
     route: "/dashboard",
@@ -45,7 +45,7 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "Dashboard_t",
+    name: "10-Q",
     key: "dashboard_t",
     icon: <Icon fontSize="small"> dashboard_t </Icon>,
     route: "/dashboard_t",
@@ -53,7 +53,7 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "Tables",
+    name: "8-Q Prediction",
     key: "tables",
     icon: <Icon fontSize="small"> table_view </Icon>,
     route: "/tables",
@@ -91,14 +91,14 @@ const routes = [
   //   route: "/profile",
   //   component: <Profile />,
   // },
-  // {
-  //   type: "collapse",
-  //   name: "Sign In",
-  //   key: "sign-in",
-  //   icon: <Icon fontSize="small">login</Icon>,
-  //   route: "/authentication/sign-in",
-  //   component: <SignIn />,
-  // },
+  {
+    type: "collapse",
+    name: "Check Other Company",
+    key: "sign-in",
+    icon: <Icon fontSize="small">login</Icon>,
+    route: "/authentication/sign-in",
+    component: <SignIn />,
+  },
   // {
   //   type: "collapse",
   //   name: "Sign Up",

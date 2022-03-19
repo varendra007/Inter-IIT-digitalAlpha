@@ -25,11 +25,8 @@ function SidenavCollapse({ icon, name, active, ...rest }) {
     const [controller] = useMaterialUIController();
     const { miniSidenav, transparentSidenav, whiteSidenav, darkMode, sidenavColor } = controller;
 
-    return ( <
-        ListItem component = "li" >
-        <
-        MDBox {...rest }
-        sx = {
+    return ( <ListItem component = "li" >
+        <MDBox {...rest } sx = {
             (theme) =>
             collapseItem(theme, {
                 active,
@@ -39,35 +36,23 @@ function SidenavCollapse({ icon, name, active, ...rest }) {
                 sidenavColor,
             })
         } >
-        <
-        ListItemIcon sx = {
-            (theme) =>
-            collapseIconBox(theme, { transparentSidenav, whiteSidenav, darkMode, active })
-        } >
-        {
-            typeof icon === "string" ? ( <
-                Icon sx = {
-                    (theme) => collapseIcon(theme, { active }) } > { icon } < /Icon>
-            ) : (
-                icon
-            )
-        } <
-        /ListItemIcon>
+        <ListItemIcon sx = {(theme) =>
+            collapseIconBox(theme, { transparentSidenav, whiteSidenav, darkMode, active })} >
+            {
+                typeof icon === "string" ? ( <Icon sx = {(theme) => collapseIcon(theme, { active }) } > { icon } </Icon> ) : (icon)
+            } 
+        </ListItemIcon>
 
-        <
-        ListItemText primary = { name }
-        sx = {
-            (theme) =>
-            collapseText(theme, {
-                miniSidenav,
-                transparentSidenav,
-                whiteSidenav,
-                active,
-            })
-        }
-        /> <
-        /MDBox> <
-        /ListItem>
+        <ListItemText primary = { name } sx = {(theme) =>
+                collapseText(theme, {
+                    miniSidenav,
+                    transparentSidenav,
+                    whiteSidenav,
+                    active,
+                })}
+        /> 
+        </MDBox> 
+        </ListItem>
     );
 }
 

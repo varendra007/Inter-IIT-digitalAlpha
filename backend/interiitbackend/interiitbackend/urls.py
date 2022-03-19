@@ -20,4 +20,6 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('predict', views.index, name='index'),
+    path('predict10k', views.index10k, name='index10k'),
+    path('predict10q', views.index10q, name='index10q'),
 ]
