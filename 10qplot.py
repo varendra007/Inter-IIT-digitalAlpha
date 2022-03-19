@@ -8,6 +8,8 @@ finnhub_client = finnhub.Client(api_key="c8o9j5qad3iddfsapu4g")
 company = "msft" # input("Company ticker : ")
 start_year = 2011 #int(input("Start year : "))
 end_year = 2020 #int(input("End year : "))
+metric = "Total assets"
+
 year_list = []
 plot_values = dict()
 
@@ -51,6 +53,25 @@ for i in data["data"]:
             if(i["year"] not in plot_values.keys()):
                 plot_values[i["year"]] = dict()
             plot_values[i["year"]][j["label"]] = j["value"]
+
+# given metric
+if metric and  metric!='':
+    for i in data["data"]:
+        for j in i["report"]["bs"]:
+            if(metric.upper() == j["label"].upper()):
+                if(i["year"] not in plot_values.keys()):
+                    plot_values[i["year"]] = dict()
+                plot_values[i["year"]][j["label"]] = j["value"]
+        for j in i["report"]["cf"]:
+            if(metric.upper() == j["label"].upper()):
+                if(i["year"] not in plot_values.keys()):
+                    plot_values[i["year"]] = dict()
+                plot_values[i["year"]][j["label"]] = j["value"]
+        for j in i["report"]["ic"]:
+            if(metric.upper() == j["label"].upper()):
+                if(i["year"] not in plot_values.keys()):
+                    plot_values[i["year"]] = dict()
+                plot_values[i["year"]][j["label"]] = j["value"]
 
 f.close()
 
