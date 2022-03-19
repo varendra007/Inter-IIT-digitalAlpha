@@ -147,7 +147,7 @@ export class DataController {
         for(const filing of filings) {
           required = [ ...required, filing.linkToFilingDetails ];
         }
-        console.log(required);
+        // console.log(required);
         ret['10-k'] = required;
       }
 
@@ -157,7 +157,7 @@ export class DataController {
         for(const filing of filings) {
           required = [ ...required, filing.linkToFilingDetails ];
         }
-        console.log(required);
+        // console.log(required);
         ret['10-q'] = required;
       }
 
@@ -167,7 +167,7 @@ export class DataController {
         for(const filing of filings) {
           required = [ ...required, filing.linkToFilingDetails ];
         }
-        console.log(required);
+        // console.log(required);
         ret['8-k'] = required;
       }
 

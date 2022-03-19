@@ -14,6 +14,7 @@ Coded by www.creative-tim.com
 */
 
 import { useState, useEffect } from "react";
+import { useDebounce } from 'use-debounce';
 
 // react-router components
 import { useLocation, Link } from "react-router-dom";
@@ -172,6 +173,7 @@ function DashboardNavbar({ absolute, light, isMini }) {
     return dist;
   };
   const [searchValue, setSearchValue] = useState("");
+  const [searchText] = useDebounce(searchValue, 1000);
   const [comp, setComp] = useState([]);
   // useEffect(() => {
   //   console.log(searchValue);
@@ -179,18 +181,22 @@ function DashboardNavbar({ absolute, light, isMini }) {
   // const handleSearchValue = (text) => {
   //   setSearchValue(text.target.values);
   // };
-  const onSubmit = (e) => {
-    e.preventDefault();
-    var li = [];
-    compData.forEach((el) => {
-      var sim = similarity(`${searchValue}`, `${el.Company}`);
-      if (sim >= 0.3 || el.Company.includes(searchValue)) {
-        li.push(el);
-      }
-    });
+  const onSearch = (e) => {
+    // e.preventDefault();
 
-    console.log(li);
-    setComp(li);
+    setSearchValue(e.target.value);
+    setTimeout(() => {
+      var li = [];
+      compData.forEach((el) => {
+        var sim = similarity(`${searchText}`, `${el.Company}`);
+        if (sim >= 0.3 || el.Company.includes(searchText)) {
+          li.push(el);
+        }
+      });
+
+      console.log(li);
+      setComp(li);
+    }, 4000);
   };
 
   return (
@@ -206,8 +212,13 @@ function DashboardNavbar({ absolute, light, isMini }) {
         {isMini ? null : (
           <MDBox sx={(theme) => navbarRow(theme, { isMini })}>
             <MDBox pr={1}>
-              {/* <MDInput label="Search here " /> */}
-              <form action="submit" onSubmit={onSubmit}>
+              <MDInput
+                label="Search here "
+                type="text"
+                value={searchValue}
+                onChange={onSearch}
+              />
+              {/* <form action="submit" onSubmit={onSubmit}>
                 <input type="submit" hidden />
                 <input
                   type="text"
@@ -222,7 +233,7 @@ function DashboardNavbar({ absolute, light, isMini }) {
                 >
                   Search
                 </button>
-              </form>
+              </form> */}
             </MDBox>
             <MDBox color={light ? "white" : "inherit"}>
               {/* <Link to="/authentication/sign-in/basic">
