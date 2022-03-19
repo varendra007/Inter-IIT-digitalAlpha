@@ -15,19 +15,15 @@ import PageLayout from "examples/LayoutContainers/PageLayout";
 import Footer from "layouts/authentication/components/Footer";
 
 function BasicLayout({ image, children }) {
-    return ( <
-        PageLayout >
-        <
-        DefaultNavbar action = {
+    return ( <PageLayout >
+        <DefaultNavbar action = {
             {
                 type: "external",
-                route: "https://creative-tim.com/product/material-dashboard-react",
-                label: "free download",
+                route: "",
                 color: "dark",
             }
-        }
-        /> <
-        MDBox position = "absolute"
+        }/>
+        <MDBox position = "absolute"
         width = "100%"
         minHeight = "100vh"
         sx = {
@@ -43,28 +39,22 @@ function BasicLayout({ image, children }) {
                 backgroundRepeat: "no-repeat",
             }
         }
-        /> <
-        MDBox px = { 1 }
+        /> 
+        <MDBox px = { 1 }
         width = "100%"
         height = "100vh"
         mx = "auto" >
-        <
-        Grid container spacing = { 1 }
+        <Grid container spacing = { 1 }
         justifyContent = "center"
         alignItems = "center"
         height = "100%" >
-        <
-        Grid item xs = { 11 }
+        <Grid item xs = { 11 }
         sm = { 9 }
         md = { 5 }
         lg = { 4 }
-        xl = { 3 } > { children } <
-        /Grid> <
-        /Grid> <
-        /MDBox> <
-        Footer light / >
-        <
-        /PageLayout>
+        xl = { 3 } > { children } </Grid> </Grid> </MDBox> 
+        <Footer light / >
+        </PageLayout>
     );
 }
 
