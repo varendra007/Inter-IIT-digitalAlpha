@@ -7,14 +7,12 @@ import axios from 'axios';
 // import { queryApi } from 'sec-api';
 import { Request, Response, NextFunction } from 'express';
 // import { exec } from 'child_process';
-import * as path from 'path';
-import { Options, PythonShell } from 'python-shell';
+// import * as path from 'path';
+// import { Options, PythonShell } from 'python-shell';
 
 import { getEnvironmentVariables } from '../environments/env';
 
 interface DataType {
-  '10-k': string[];
-  '10-q': string[];
   '8-k': string[];
 }
 
@@ -86,25 +84,6 @@ export class DataController {
       const date = new Date();
       query += `${start && ` AND filedAt:[${startDate}`}${(start && end) ? ` TO ${endDate}]` : ` TO ${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}]`}`;
       console.log(query);
-      const queryObj10k = {
-        query: {
-          query_string: {
-            query: query+' AND formType:\"10-K\"'
-          }
-        },
-        from: '0',
-        sort: [{ filedAt: { order: 'desc' } }]
-      };
-
-      const queryObj10q = {
-        query: {
-          query_string: {
-            query: query+' AND formType:\"10-Q\"'
-          }
-        },
-        from: '0',
-        sort: [{ filedAt: { order: 'desc' } }]
-      };
 
       const queryObj8k = {
         query: {
@@ -116,22 +95,6 @@ export class DataController {
         sort: [{ filedAt: { order: 'desc' } }]
       };
 
-      const response10k = await axios({
-        method: 'POST',
-        url: `https://api.sec-api.io?token=${
-          getEnvironmentVariables().api_key
-        }`,
-        data: queryObj10k
-      });
-
-      const response10q = await axios({
-        method: 'POST',
-        url: `https://api.sec-api.io?token=${
-          getEnvironmentVariables().api_key
-        }`,
-        data: queryObj10q
-      });
-
       const response8k = await axios({
         method: 'POST',
         url: `https://api.sec-api.io?token=${
@@ -141,30 +104,8 @@ export class DataController {
       });
 
       const ret: DataType = {
-        '10-k': [],
-        '10-q': [],
         '8-k': []
       };
-
-      if(response10k.data) {
-        const filings = response10k.data.filings;
-        let required: any[] = [];
-        for(const filing of filings) {
-          required = [ ...required, filing.linkToFilingDetails ];
-        }
-        // console.log(required);
-        ret['10-k'] = required;
-      }
-
-      if(response10q.data) {
-        const filings = response10q.data.filings;
-        let required: any[] = [];
-        for(const filing of filings) {
-          required = [ ...required, filing.linkToFilingDetails ];
-        }
-        // console.log(required);
-        ret['10-q'] = required;
-      }
 
       if(response8k.data) {
         const filings = response8k.data.filings;
@@ -172,52 +113,15 @@ export class DataController {
         for(const filing of filings) {
           required = [ ...required, filing.linkToFilingDetails ];
         }
-        // console.log(required);
-        let arg = '';
-        for(const r of required) {
-          arg += `${r} `;
-        }
-        let dataToSend: any;
-        const py_path = path.join(__dirname, 'ML_Model');
-        const python_exe_path = path.join(__dirname, 'ML_Model/scripts/python.exe');
-        const py_shell_options: Options = {
-          mode: 'text',
-          pythonPath: python_exe_path,
-          pythonOptions: ['-u'], // get print results in real-time
-          scriptPath: py_path,
-          args: required
-        };
-        PythonShell.run('final.py', py_shell_options, function (err, results) {
-          if (err) throw err;
-          // results is an array consisting of messages collected during execution
-          console.log('results: %j', results);
+        const modelData = await axios({
+          method: 'POST',
+          url: 'http://localhost:8000/predict',
+          data: {
+            arr: required
+          }
         });
-        // exec(`cd ML_Model && python ./final.py ${arg}`, (err: any, data: any, stderr: any) => {
-        // exec(`sh script.sh`, (err: any, data: any, stderr: any) => {
-        //   console.log('Pipe data from python script ...');
-        //   dataToSend = data;
-        //   if(err) {
-        //     console.log(err);
-        //   }
-        //   if(stderr) {
-        //     console.log(stderr);
-        //   }
-        //   console.log(data);
-        // });
-        // let yourscript = exec('sh script.sh',
-        // (error, stdout, stderr) => {
-        //     console.log(stdout);
-        //     console.log(stderr);
-        //     if (error !== null) {
-        //         console.log(`exec error: ${error}`);
-        //     }
-        // });
-        // shell.exec('pwd');
-        // shell.pwd();
-        // console.log('ML_Model/final.py', `${arg}`);
-        // python.stdout.on('data', );
-        console.log(dataToSend);
-        ret['8-k'] = required;
+        // console.log(modelData?.data);
+        ret['8-k'] = JSON.parse(modelData?.data);
       }
 
       return res.status(200).json({
