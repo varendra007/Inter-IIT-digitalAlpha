@@ -3,5 +3,5 @@ Include
 Lib
 Scripts
 share
-bin
+# bin
 nltk_data

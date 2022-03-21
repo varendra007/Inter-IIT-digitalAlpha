@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "proxy": "http://127.0.0.1:8080",
   "scripts": {
     "start": "node dist/index.js",
 		"postinstall": "tsc",

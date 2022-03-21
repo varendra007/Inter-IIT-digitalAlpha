@@ -88,7 +88,14 @@ export class DataController {
 
   static async get10k(req: Request, res: Response, next: NextFunction) {
     try {
-      const body = req.body;
+      const { companies, startDate, endDate } = req.query;
+      const body = {
+        arr: {
+            company: companies,
+            start_year: Number((startDate as string)?.split('-')[0]),
+            end_year: Number((endDate as string)?.split('-')[0])
+        }
+      }
       const response = await axios({
         method: 'POST',
         url: 'http://127.0.0.1:8000/predict10k',
@@ -105,7 +112,14 @@ export class DataController {
 
   static async get10q(req: Request, res: Response, next: NextFunction) {
     try {
-      const body = req.body;
+      const { companies, startDate, endDate } = req.query;
+      const body = {
+        arr: {
+            company: companies,
+            start_year: Number((startDate as string)?.split('-')[0]),
+            end_year: Number((endDate as string)?.split('-')[0])
+        }
+      }
       const response = await axios({
         method: 'POST',
         url: 'http://127.0.0.1:8000/predict10q',
