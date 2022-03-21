@@ -30,10 +30,15 @@ function Dashboard() {
   // const arr = [json1, json2, json3, json4, json5]
   // const [file, setFile] = useState(json1);
   const [reqBody, setJson1] = useState(json1);
+  // console.log(localStorage.getItem("searchCom"));
+  const [search, setSearchQuery] = useState(localStorage.getItem("searchCom"));
   useEffect(() => {
+    // ! serch me data store hai console log dekh le
+
     // let x = Math.floor(Math.random() * 5 );
     // setFile(arr[x]);
-    setJson1(JSON.parse(localStorage.getItem("reqBdy")));
+    // setJson1(JSON.parse(localStorage.getItem("")));
+    // console.log(localStorage.searchCom);
     // axios({
     //   method: "POST",
     //   url: "http://localhost:8000/predict10k",
@@ -47,6 +52,9 @@ function Dashboard() {
     // }).then(res => {
     //   setJson1(res?.data);
     // }).catch((err) => console.log(err))
+    setTimeout(() => {
+      console.log(search);
+    }, 1000);
   }, []);
 
   return (
