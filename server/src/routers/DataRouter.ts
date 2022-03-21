@@ -20,11 +20,11 @@ class DataRouter {
   getRoutes(): void {
     // add all get routes here
     this.router.get('/search', DataController.getFilings);
+    this.router.get('/predict10k', DataController.get10k);
+    this.router.get('/predict10q', DataController.get10q);
   }
   postRoutes(): void {
     // add all post routes here
-    this.router.post('/predict10k', DataController.get10k);
-    this.router.post('/predict10q', DataController.get10q);
   }
   putRoutes(): void {
     // add all get routes here

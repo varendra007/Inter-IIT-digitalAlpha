@@ -75,6 +75,7 @@ export class DataController {
         });
         // console.log(modelData?.data);
         ret['8-k'] = JSON.parse(modelData?.data);
+        // ret['8-k'] = required;
       }
 
       return res.status(200).json({
@@ -88,6 +89,7 @@ export class DataController {
 
   static async get10k(req: Request, res: Response, next: NextFunction) {
     try {
+      console.log(req.query);
       const { companies, startDate, endDate } = req.query;
       const body = {
         arr: {

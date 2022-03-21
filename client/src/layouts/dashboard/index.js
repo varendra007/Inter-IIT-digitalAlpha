@@ -31,26 +31,27 @@ function Dashboard() {
   // const [file, setFile] = useState(json1);
   const [reqBody, setJson1] = useState(json1);
   // console.log(localStorage.getItem("searchCom"));
-  const [search, setSearchQuery] = useState(localStorage.getItem("searchCom"));
+  const [search, setSearchQuery] = useState(JSON.parse(localStorage.getItem("searchCom")));
   useEffect(() => {
-    // ! serch me data store hai console log dekh le
 
     // let x = Math.floor(Math.random() * 5 );
     // setFile(arr[x]);
     // setJson1(JSON.parse(localStorage.getItem("")));
     // console.log(localStorage.searchCom);
-    axios({
-      method: "GET",
-      url: `http://localhost:5000/data/predict10k?&companies=${search.company.Ticker}&startDate=${search.startDate}&endDate=${search.endDate}`,
-    })
-      .then((res) => {
-        setJson1(res?.data);
-      })
-      .catch((err) => console.log(err));
-    setTimeout(() => {
-      console.log(search);
-    }, 1000);
-  }, []);
+    try {
+      setTimeout(() => {
+        console.log(search);
+        axios(
+          `http://localhost:5000/data/predict10k?companies=${search.company.Ticker}&startDate=${search.startDate}&endDate=${search.endDate}`
+        ).then((res) => {
+          setJson1(res?.data);
+          console.log(reqBody);
+        }).catch((err) => console.log(err));
+      }, 1000);
+    } catch (error) {
+      console.log(error);
+    }
+  }, [search]);
 
   return (
     <DashboardLayout>
@@ -58,7 +59,7 @@ function Dashboard() {
       <MDBox py={3}>
         <MDBox mt={4.5}>
           <Grid container spacing={3}>
-            {json1?.results?.map((el, ind) => {
+            {reqBody?.results?.map((el, ind) => {
               return (
                 <>
                   <Grid item xs={12} md={6} lg={4}>
