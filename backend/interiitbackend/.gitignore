@@ -1,0 +1,7 @@
+# EXCLUDING VENV FILES
+Include
+Lib
+Scripts
+share
+bin
+nltk_data

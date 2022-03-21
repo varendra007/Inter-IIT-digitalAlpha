@@ -23,6 +23,8 @@ class DataRouter {
   }
   postRoutes(): void {
     // add all post routes here
+    this.router.post('/predict10k', DataController.get10k);
+    this.router.post('/predict10q', DataController.get10q);
   }
   putRoutes(): void {
     // add all get routes here

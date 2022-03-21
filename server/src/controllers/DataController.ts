@@ -17,53 +17,6 @@ interface DataType {
 }
 
 export class DataController {
-  // static computeUrl(acno: string, cik: string) {
-  //   let ans = '';
-  //   for (const ch of acno) {
-  //     if (ch !== '-') {
-  //       ans += ch;
-  //     }
-  //   }
-  //   return `https://www.sec.gov/Archives/edgar/data/${Number(
-  //     cik
-  //   )}/${ans}/${acno}-index.htm`;
-  // }
-
-  // static async getAccessionNumber(
-  //   req: Request,
-  //   res: Response,
-  //   next: NextFunction
-  // ) {
-  //   try {
-  //     const { cik } = req.query;
-  //     const response = await axios(
-  //       `https://data.sec.gov/submissions/CIK${cik}.json`
-  //     );
-  //     const data = response?.data;
-  //     const acnos = data?.filings.recent.accessionNumber;
-  //     const forms = data?.filings.recent.form;
-  //     const results: DataType = {
-  //       '10-k': [],
-  //       '10-q': [],
-  //       '8-k': []
-  //     };
-  //     acnos.forEach((acno: string, index: string) => {
-  //       if (forms[index] === '10-K') {
-  //         results['10-k'].push(DataController.computeUrl(acno, String(cik)));
-  //       } else if (forms[index] === '10-Q') {
-  //         results['10-q'].push(DataController.computeUrl(acno, String(cik)));
-  //       } else if (forms[index] === '8-K') {
-  //         results['8-k'].push(DataController.computeUrl(acno, String(cik)));
-  //       }
-  //     });
-  //     return res.status(200).json({
-  //       data: results,
-  //       success: true
-  //     });
-  //   } catch (err) {
-  //     next(err);
-  //   }
-  // }
 
   static async getFilings(req: Request, res: Response, next: NextFunction) {
     try {
@@ -115,7 +68,7 @@ export class DataController {
         }
         const modelData = await axios({
           method: 'POST',
-          url: 'http://localhost:8000/predict',
+          url: 'http://127.0.0.1:8000/predict',
           data: {
             arr: required
           }
@@ -130,6 +83,40 @@ export class DataController {
       });
     } catch (error) {
       next(error);
+    }
+  }
+
+  static async get10k(req: Request, res: Response, next: NextFunction) {
+    try {
+      const body = req.body;
+      const response = await axios({
+        method: 'POST',
+        url: 'http://127.0.0.1:8000/predict10k',
+        data: body
+      })
+      return res.status(200).json({
+        data: response?.data,
+        success: true
+      })
+    } catch (err) {
+      next(err);
+    }
+  }
+
+  static async get10q(req: Request, res: Response, next: NextFunction) {
+    try {
+      const body = req.body;
+      const response = await axios({
+        method: 'POST',
+        url: 'http://127.0.0.1:8000/predict10q',
+        data: body
+      })
+      return res.status(200).json({
+        data: response?.data,
+        success: true
+      })
+    } catch (err) {
+      next(err);
     }
   }
 }

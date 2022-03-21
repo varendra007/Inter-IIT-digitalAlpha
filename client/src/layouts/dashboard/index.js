@@ -18,19 +18,35 @@ import ComplexStatisticsCard from "examples/Cards/StatisticsCards/ComplexStatist
 // import Projects from "layouts/dashboard/components/Projects";
 // import OrdersOverview from "layouts/dashboard/components/OrdersOverview";
 import json1 from "./data/10kjson1.json";
-import json2 from "./data/10kjson2.json";
-import json3 from "./data/10kjson3.json";
-import json4 from "./data/10kjson4.json";
-import json5 from "./data/10kjson5.json";
+// import json2 from "./data/10kjson2.json";
+// import json3 from "./data/10kjson3.json";
+// import json4 from "./data/10kjson4.json";
+// import json5 from "./data/10kjson5.json";
 import { useEffect, useState } from "react";
+import axios from "axios";
 
 function Dashboard() {
   // const { Income, Revenue, Expense, Loss, Stock,NetIncome } = reportsLineChartData;
-  const arr = [json1, json2, json3, json4, json5]
-  const [file, setFile] = useState(json1);
+  // const arr = [json1, json2, json3, json4, json5]
+  // const [file, setFile] = useState(json1);
+  const [reqBody, setJson1] = useState(json1);
   useEffect(() => {
-    let x = Math.floor(Math.random() * 5 );
-    setFile(arr[x]);
+    // let x = Math.floor(Math.random() * 5 );
+    // setFile(arr[x]);
+    setJson1(JSON.parse(localStorage.getItem("reqBdy")));
+    // axios({
+    //   method: "POST",
+    //   url: "http://localhost:8000/predict10k",
+    //   data: {
+    //     arr: {
+    //       company: reqBdy.company.Ticker,
+    //       start_year: reqBdy.startDate.split('-').pop(),
+    //       end_year: reqBdy.endDate.split('-').pop(),
+    //     }
+    //   }
+    // }).then(res => {
+    //   setJson1(res?.data);
+    // }).catch((err) => console.log(err))
   }, []);
 
   return (
@@ -39,7 +55,7 @@ function Dashboard() {
       <MDBox py={3}>
         <MDBox mt={4.5}>
           <Grid container spacing={3}>
-            {json1.results.map((el, ind) => {
+            {reqBody.results?.map((el, ind) => {
               return (
                 <>
                   <Grid item xs={12} md={6} lg={4}>

@@ -44,12 +44,13 @@ def index10q(request):
     if request.method == 'POST':
         # print(request.body)
         json_data = json.loads(request.body)
+        print(json_data)
         # print(json_data)
         arrofstr=json_data['arr']
         # responseData=json.dumps(predict_progress(arrofstr))
         # returned_list = main_10qpart(arrofstr)
         returned_list = main_10qpart(arrofstr['company'], arrofstr['start_year'], arrofstr['end_year'])
-        print(returned_list)
+        # print(returned_list)
         # res_dct = {str(i): str(returned_list[i]) for i in range(len(returned_list))}
         # responseData = json.dumps(res_dct)
         #return HttpResponse(json.dumps(responseData), content_type="application/json")
