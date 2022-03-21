@@ -10,7 +10,7 @@ Route:
 Request:
 
 ```js
-/search?companies=##########&startDate=yyyy-mm-dd&endDate=yyyy-mm-dd
+/search?    &startDate=yyyy-mm-dd&endDate=yyyy-mm-dd
 ```
 
 Query: cik number to be searched for. In case you need multiple searches (for example, from an arry), you have to call the api multiple times.

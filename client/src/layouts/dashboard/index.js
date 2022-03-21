@@ -39,19 +39,14 @@ function Dashboard() {
     // setFile(arr[x]);
     // setJson1(JSON.parse(localStorage.getItem("")));
     // console.log(localStorage.searchCom);
-    // axios({
-    //   method: "POST",
-    //   url: "http://localhost:8000/predict10k",
-    //   data: {
-    //     arr: {
-    //       company: reqBdy.company.Ticker,
-    //       start_year: reqBdy.startDate.split('-').pop(),
-    //       end_year: reqBdy.endDate.split('-').pop(),
-    //     }
-    //   }
-    // }).then(res => {
-    //   setJson1(res?.data);
-    // }).catch((err) => console.log(err))
+    axios({
+      method: "GET",
+      url: `http://localhost:5000/data/predict10k?&companies=${search.company.Ticker}&startDate=${search.startDate}&endDate=${search.endDate}`,
+    })
+      .then((res) => {
+        setJson1(res?.data);
+      })
+      .catch((err) => console.log(err));
     setTimeout(() => {
       console.log(search);
     }, 1000);
@@ -63,7 +58,7 @@ function Dashboard() {
       <MDBox py={3}>
         <MDBox mt={4.5}>
           <Grid container spacing={3}>
-            {reqBody.results?.map((el, ind) => {
+            {json1?.results?.map((el, ind) => {
               return (
                 <>
                   <Grid item xs={12} md={6} lg={4}>
@@ -80,7 +75,7 @@ function Dashboard() {
                   </Grid>
                 </>
               );
-            })}
+            })}{" "}
             {/* <Grid item xs={12} md={6} lg={4}>
               <MDBox mb={3}>
                 <ReportsLineChart

@@ -368,23 +368,7 @@ export default function SearchBar(props) {
     localStorage.setItem("searchCom", JSON.stringify(reqBdy));
 
     // localStorage.setItem("reqBdy", JSON.stringify(reqBdy));
-    // axios({
-    //   method: "POST",
-    //   url: "http://127.0.0.1:8000/predict10k",
-    //   data: {
-    //     arr: {
-    //       company: reqBdy.company.Ticker,
-    //       start_year: reqBdy.startDate.split("-").pop(),
-    //       end_year: reqBdy.endDate.split("-").pop(),
-    //     },
-    //   },
-    // })
-    //   .then((res) => {
-    //     console.log(res?.data);
-    //     // setJson1(res?.data);
-    //     localStorage.setItem("reqBdy", JSON.stringify(res?.data));
-    //   })
-    //   .catch((err) => console.log(err));
+
     window.location.href = "/dashboard";
   };
 
