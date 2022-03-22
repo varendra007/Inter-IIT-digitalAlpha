@@ -17,21 +17,36 @@ import ComplexStatisticsCard from "examples/Cards/StatisticsCards/ComplexStatist
 // Dashboard components
 // import Projects from "layouts/dashboard/components/Projects";
 // import OrdersOverview from "layouts/dashboard/components/OrdersOverview";
-import json1 from "../data/10qjson1.json";
-import json2 from "../data/10qjson2.json";
-import json3 from "../data/10qjson3.json";
-import json4 from "../data/10qjson4.json";
-import json5 from "../data/10qjson5.json";
+import json1 from "../data/10kjson1.json";
+
 import { useEffect, useState } from "react";
+import axios from "axios";
 
 function Dashboard_t() {
   // const { Income, Revenue, Expense, Loss, Stock,NetIncome } = reportsLineChartData;
-  const arr = [json1, json2, json3, json4, json5]
-  const [file, setFile] = useState(json1);
+  const [reqBody, setReqBody] = useState(json1);
+  // console.log(localStorage.getItem("searchCom"));
+  const [search, setSearchQuery] = useState(JSON.parse(localStorage.getItem("searchCom")));
   useEffect(() => {
-    let x = Math.floor(Math.random() * 5 );
-    setFile(arr[x]);
-  }, []);
+
+    // let x = Math.floor(Math.random() * 5 );
+    // setFile(arr[x]);
+    // setJson1(JSON.parse(localStorage.getItem("")));
+    // console.log(localStorage.searchCom);
+    try {
+      console.log(search);
+      axios(
+        `http://localhost:5000/data/predict10k?companies=${search.company.Ticker}&startDate=${search.startDate}&endDate=${search.endDate}`
+      ).then((res) => {
+        setReqBody(res.data?.data);
+        console.log(res.data?.data);
+      }).catch((err) => console.log(err));
+      // setTimeout(() => {
+      // }, 1000);
+    } catch (error) {
+      console.log(error);
+    }
+  }, [search]);
 
   return (
     <DashboardLayout>
@@ -40,7 +55,7 @@ function Dashboard_t() {
         <MDBox mt={4.5}>
           <Grid container spacing={3}>
             {" "}
-            {file.results.map((el, ind) => {
+            {reqBody.result?.map((el, ind) =>  {
               return (
                 <>
                   <Grid item xs={12} md={6} lg={4}>

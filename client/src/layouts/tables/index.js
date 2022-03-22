@@ -12,10 +12,35 @@ import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import ReportsLineChart from "examples/Charts/LineCharts/ReportsLineChart";
 
 import json from "../dashboard/data/10kjson1.json";
+import { useEffect, useState } from "react";
+import axios from "axios";
 function Tables() {
     var grwth=["Will Fall","Will remain Neutral","Will Rise"];
     var clr=["red","blue","green"];
     var ind=1-1;
+    const [reqBody, setReqBody] = useState(json);
+  // console.log(localStorage.getItem("searchCom"));
+  const [search, setSearchQuery] = useState(JSON.parse(localStorage.getItem("searchCom")));
+  useEffect(() => {
+
+    // let x = Math.floor(Math.random() * 5 );
+    // setFile(arr[x]);
+    // setJson1(JSON.parse(localStorage.getItem("")));
+    // console.log(localStorage.searchCom);
+    try {
+      console.log(search);
+      axios(
+        `http://localhost:5000/data/predict10k?companies=${search.company.Ticker}&startDate=${search.startDate}&endDate=${search.endDate}`
+      ).then((res) => {
+        setReqBody(res.data?.data);
+        console.log(res.data?.data);
+      }).catch((err) => console.log(err));
+      // setTimeout(() => {
+      // }, 1000);
+    } catch (error) {
+      console.log(error);
+    }
+  }, [search]);
 
     return ( <DashboardLayout >
         <DashboardNavbar / >
@@ -32,7 +57,7 @@ function Tables() {
             <Grid item xs = { 6 } >
                 <Card >
                     {
-                        json.results.map((el, ind) => {
+                        reqBody.result?.map((el, ind) => {
                             if(el.head=="Stock Value"){
                                 return (
                                         <MDBox mb={3}>
