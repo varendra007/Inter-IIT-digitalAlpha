@@ -29,7 +29,7 @@ function Dashboard() {
   // const { Income, Revenue, Expense, Loss, Stock,NetIncome } = reportsLineChartData;
   // const arr = [json1, json2, json3, json4, json5]
   // const [file, setFile] = useState(json1);
-  const [reqBody, setJson1] = useState(json1);
+  const [reqBody, setReqBody] = useState(json1);
   // console.log(localStorage.getItem("searchCom"));
   const [search, setSearchQuery] = useState(JSON.parse(localStorage.getItem("searchCom")));
   useEffect(() => {
@@ -39,15 +39,15 @@ function Dashboard() {
     // setJson1(JSON.parse(localStorage.getItem("")));
     // console.log(localStorage.searchCom);
     try {
-      setTimeout(() => {
-        console.log(search);
-        axios(
-          `http://localhost:5000/data/predict10k?companies=${search.company.Ticker}&startDate=${search.startDate}&endDate=${search.endDate}`
-        ).then((res) => {
-          setJson1(res?.data);
-          console.log(reqBody);
-        }).catch((err) => console.log(err));
-      }, 1000);
+      console.log(search);
+      axios(
+        `http://localhost:5000/data/predict10k?companies=${search.company.Ticker}&startDate=${search.startDate}&endDate=${search.endDate}`
+      ).then((res) => {
+        setReqBody(res.data?.data);
+        console.log(res.data?.data);
+      }).catch((err) => console.log(err));
+      // setTimeout(() => {
+      // }, 1000);
     } catch (error) {
       console.log(error);
     }
@@ -59,10 +59,9 @@ function Dashboard() {
       <MDBox py={3}>
         <MDBox mt={4.5}>
           <Grid container spacing={3}>
-            {reqBody?.results?.map((el, ind) => {
-              return (
+            {reqBody.result?.map((el, ind) => (
                 <>
-                  <Grid item xs={12} md={6} lg={4}>
+                  <Grid item xs={12} md={6} lg={4} key={ind}>
                     <MDBox mb={3}>
                       <ReportsLineChart
                         color="info"
@@ -75,8 +74,7 @@ function Dashboard() {
                     </MDBox>
                   </Grid>
                 </>
-              );
-            })}{" "}
+            ))}{" "}
             {/* <Grid item xs={12} md={6} lg={4}>
               <MDBox mb={3}>
                 <ReportsLineChart
