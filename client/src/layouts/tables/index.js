@@ -14,6 +14,8 @@ import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import ReportsLineChart from "examples/Charts/LineCharts/ReportsLineChart";
 
 import json from "../dashboard/data/10kjson1.json";
+import { useEffect, useState } from "react";
+import axios from "axios";
 function Tables() {
     var grwth=["Will Fall","Will remain Neutral","Will Rise"];
     var clr=["red","blue","green"];
