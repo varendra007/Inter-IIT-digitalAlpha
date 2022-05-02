@@ -14,8 +14,6 @@ import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import ReportsLineChart from "examples/Charts/LineCharts/ReportsLineChart";
 
 import json from "../dashboard/data/10kjson1.json";
-import { useEffect, useState } from "react";
-import axios from "axios";
 function Tables() {
     var grwth=["Will Fall","Will remain Neutral","Will Rise"];
     var clr=["red","blue","green"];
@@ -42,7 +40,7 @@ function Tables() {
 
     return ( 
         <DashboardLayout >
-            <DashboardNavbar / >
+            <DashboardNavbar />
             <MDBox pt = { 6 }
             pb = { 3 } >
             <Grid container spacing = { 6 } >
@@ -56,7 +54,7 @@ function Tables() {
                 <Grid item xs = { 6 } >
                     <Card >
                         {
-                            reqBody?.map((el, ind) => {
+                            json.results?.map((el, ind) => {
                                 if(el.head==="Stock Value"){
                                     return (
                                             <MDBox mb={3}>

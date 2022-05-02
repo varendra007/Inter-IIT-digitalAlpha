@@ -38,6 +38,7 @@ export class DataController {
       query += `${start && ` AND filedAt:[${startDate}`}${(start && end) ? ` TO ${endDate}]` : ` TO ${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}]`}`;
       console.log(query);
 
+      
       const queryObj8k = {
         query: {
           query_string: {
@@ -47,7 +48,7 @@ export class DataController {
         from: '0',
         sort: [{ filedAt: { order: 'desc' } }]
       };
-
+      
       const response8k = await axios({
         method: 'POST',
         url: `https://api.sec-api.io?token=${
@@ -55,11 +56,11 @@ export class DataController {
         }`,
         data: queryObj8k
       });
-
+      
       const ret: DataType = {
         '8-k': []
       };
-
+      
       if(response8k.data) {
         const filings = response8k.data.filings;
         let required: any[] = [];
@@ -73,9 +74,10 @@ export class DataController {
             arr: required
           }
         });
+        console.log('\nRunning...\n');
         // console.log(modelData?.data);
-        ret['8-k'] = JSON.parse(modelData?.data);
-        // ret['8-k'] = required;
+        // ret['8-k'] = JSON.parse(modelData?.data);
+        ret['8-k'] = required;
       }
 
       return res.status(200).json({

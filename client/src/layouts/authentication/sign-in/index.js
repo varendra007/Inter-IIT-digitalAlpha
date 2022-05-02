@@ -348,47 +348,35 @@ export default function SearchBar(props) {
   };
 
   useDebounce(searchQuery, 500, searchLShow);
-  const [start, setStart] = useState("2022-03-01");
-  const [end, setEnd] = useState("2018-03-01");
-  useEffect(() => {
-    console.log(end);
-    console.log(start);
-  }, [end, start]);
-  const handleSearch = (comp) => {
-    console.log(comp);
-    console.log(end);
-    console.log(start);
+  const [start,setStart] = useState(null)
+  const [end, setEnd] = useState(null)
+  useEffect(() =>{
+      console.log(end)
+      console.log(start)
+
+  },[end, start])
+  const handleSearch = (comp) =>{
+    console.log(comp)
+    console.log(end)
+    console.log(start)
     // var data = {}
-    const reqBdy = {
-      company: comp,
-      startDate: start,
-      endDate: end,
-    };
-    localStorage.clear("searchCom");
-    localStorage.setItem("searchCom", JSON.stringify(reqBdy));
 
-    // localStorage.setItem("reqBdy", JSON.stringify(reqBdy));
+    window.location.href = '/dashboard'
+    window.localStorage.setItem("result jo chhiye ka key","fetched")
 
-    window.location.href = "/dashboard";
-  };
+  }
 
   return (
     <div
       style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}
     >
       <form action="" style={{ display: "flex", flexDirection: "column", minWidth: "50vh" }}>
-        <label style={{ color: "white" }}>Start date</label>
-        <input type="date" value={start} onChange={(e) => setStart(e.target.value)} />
-        <br />
-        <label style={{ color: "#fff" }}>End date</label>
-        <input
-          type="date"
-          name="end-date"
-          id=""
-          value={end}
-          onChange={(e) => setEnd(e.target.value)}
-        />
-        <br />
+        <label style={{color: 'white'}}>Start date</label>
+        <input type="date" value={start} onChange={(e) => setStart(e.target.value)}/>
+        <br/>
+        <label style={{color: '#fff'}}>End date</label>
+        <input type="date" name="end-date" id="" value={end} onChange={(e) => setEnd(e.target.value)} />
+        <br/>
         <div></div>
         <SearchBarContainer
           animate={isExpanded ? "expanded" : "collapsed"}
@@ -444,14 +432,11 @@ export default function SearchBar(props) {
               )}
               {!isLoading && !isEmpty && (
                 <>
-                  {LShows.map(({ CIK, Company, Ticker }) => (
-                    <div
-                      onClick={() => {
-                        handleSearch({ CIK, Company, Ticker });
-                      }}
-                      style={{ cursor: "pointer" }}
-                    >
-                      <Litem key={CIK} Company={Company} />
+                  {LShows.map(({ CIK, Company,Ticker }) => (
+                    <div onClick={() =>{
+                        handleSearch({CIK,Company,Ticker})
+                    }} style={{cursor: 'pointer'}}>
+                        <Litem key={CIK} Company={Company} />
                     </div>
                   ))}
                 </>
